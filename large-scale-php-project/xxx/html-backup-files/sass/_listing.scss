@@ -1,0 +1,168 @@
+/* Listing page columns
+/* ----------------------------------------------------------- */
+.listing-page {
+	.listing-wrap {
+		&.item-grid-view,
+		&.item-card-view {
+			& > .row {
+				grid-template-columns:minmax(0, 1fr) minmax(0, 1fr);
+		        @include respond-to(sm-max) {
+		            grid-template-columns: minmax(0, 1fr);
+		        }
+			}
+		}
+	}
+	&.listing-page-full-width {
+		.listing-wrap {
+			&.item-grid-view,
+			&.item-card-view {
+				& > .row {
+					grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+			        @include respond-to(md-max) {
+			            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+			        }
+			        @include respond-to(sm-max) {
+			            grid-template-columns: minmax(0, 1fr);
+			        }
+				}
+			}
+		}
+	}
+}
+.item-grid-view,
+.item-card-view {
+    & > .row {
+    	margin-#{$start-direction}: 0;
+        margin-#{$end-direction}: 0;
+        display: grid;
+        grid-gap: 20px 30px;
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
+}
+.item-list-view {
+    & > .row {
+    	margin-#{$start-direction}: 0;
+        margin-#{$end-direction}: 0;
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
+}
+
+/* sticky map listing
+/* ----------------------------------------------------------- */
+.listing-sticky-map {
+	margin-bottom: 35px;
+	.listing-wrap {
+		.row {
+			margin-#{$start-direction}: -5px;
+			margin-#{$end-direction}: -5px;
+		}
+	}
+	.item-wrap {
+		padding-#{$start-direction}: 5px;
+		padding-#{$end-direction}: 5px;
+		margin-bottom: 15px;
+	}
+	.item-list-view {
+		@extend .float-none;
+		@extend .full-width;
+		.item-media-thumb {
+			width: 180px;
+			@include respond-to(sm-max) {
+				width: 100%;
+			}
+		}
+		.item-body {
+			@extend .full-width;
+			.table-block {
+				@extend .display-block;			
+			}
+		}
+		.item-amenities {
+			height: auto;
+	        @include respond-to(sm-max) {
+	            height: auto;
+	        } 
+			.item-type {
+				@extend .display-inline;			
+			}
+			li {
+				padding-right: 5px !important;
+			}
+		}
+
+		.media-body {
+			padding: 0px 10px 0 20px;
+		}
+	}
+	.item-grid-view,
+	.item-card-view {
+		.item-wrap {
+			max-width: 282px;
+			@extend .full-height;
+			@include respond-to(lg-max) {
+				max-width: 100%;
+			}
+			@include respond-to(md-max) {
+				max-width: 365px;
+			}
+			@include respond-to(sm-max) {
+				max-width: 100%;
+			}
+			.title {
+				margin-bottom: 0;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				max-width: 210px;
+				@include respond-to(lg-max) {
+					max-width: 100%;
+					white-space: wrap;
+					text-overflow: normal;
+				}
+			}
+			.item-amenities {
+				.item-type {
+					@extend .display-block;
+					margin-top: 5px;
+				}
+			}	
+		}
+	}
+	.item-card-view {
+		height: 100%;
+	}
+	.item-address,
+	.item-user-image {
+		@extend .display-none;
+	}
+	.item-title-head {
+		margin-bottom: 0;
+	}
+	.item-footer {
+		width: 100%;	
+		margin-top: 3px;	
+	}
+	.item-amenities {
+		.item-label {
+			@extend .display-none;		
+		}
+	}	
+} 
+
+/* sticky map listing - firefox hack
+/* ----------------------------------------------------------- */
+@-moz-document url-prefix() {
+	.listing-sticky-map {
+		.item-list-view {
+			.media-left {
+				width: 1000px
+			}
+		}
+	}
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Card</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Event-Sängerin</title><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css'>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="main-content" class="flex flex-col items-center justify-center min-h-screen p-6 text-lg text-gray-100 bg-gradient-to-br from-gray-800 to-gray-900">
+  <div id="visitenkarte" class="flex flex-col h-auto max-w-full gap-8 p-6 m-6 bg-gray-900 border-8 border-blue-400 shadow-2xl rounded-2xl w-96">
+    <div id="header" class="flex flex-wrap gap-4">
+      <img id="portrait" src="https://source.unsplash.com/500x500/?clarinet" alt="Singer" x-data="{ bigPhoto: false }" @click="bigPhoto = !bigPhoto" class="object-cover border-blue-400 rounded-2xl" :class="{ 'w-24 border-4': !bigPhoto, '': bigPhoto }" />
+      <div id="info" class="flex flex-col flex-wrap justify-center">
+        <h1 id="name" class="pb-2 text-3xl font-bold">llolol das</h1>
+        <small id="profession" class="pt-2 text-lg italic border-t-4 border-blue-400">Email : abc332@gmail.com</small>
+      </div>
+    </div>
+    <div id="tagline" class="">
+      <p>
+Phone : 033221111
+      </p>
+    </div>
+    <div id="tagline" class="">
+      <p>
+field : Interior Designer
+      </p>
+    </div>
+    <div id="tagline" class="">
+      <p>
+Region : West
+      </p>
+    </div>   <div id="tagline" class="">
+      <p>
+Exp: 0-2
+      </p>
+    </div>
+    <div id="social" x-data="{ tab: 'mail' }">
+      <div id="social--collapsed" class="grid grid-cols-4 gap-5 py-6 text-3xl text-blue-400 border-t-4 border-blue-400 place-items-center">
+        <span title="YouTube" @click.prevent="tab = 'youtube'" :class="{ 'border-b-4 border-blue-400': tab === 'youtube' }"><i class="fab fa-youtube" title="YouTube"></i></span>
+        <span title="Instagram" @click.prevent="tab = 'instagram'" :class="{ 'border-b-4 border-blue-400': tab === 'instagram' }"><i class="fab fa-instagram" title="Instagram"></i></span>
+        <span title="SoundCloud" @click.prevent="tab = 'soundcloud'" :class="{ 'border-b-4 border-blue-400': tab === 'soundcloud' }"><i class="fab fa-soundcloud" title="SoundCloud"></i></span>
+        <span title="Schicken Sie mir eine Mail" @click.prevent="tab = 'mail'" :class="{ 'border-b-4 border-blue-400': tab === 'mail' }"><i class="far fa-envelope-open"></i></span>
+      </div>
+      <div id="social--expanded" class="">
+        <div x-cloak x-show.transition.in.duration.200.scale.50.origin.top="tab === 'youtube'" class="h-60">
+          <iframe class="w-full h-60" src="https://www.youtube.com/embed/iU2F0yjZ0mM?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div x-cloak x-show.transition.in.duration.200.scale.50.origin.top="tab === 'instagram'" class="h-60">
+          <p class="pb-4">
+           
+            <a href="https://instagram.com/jacobcollier" title="Instagram" class="font-bold border-b-2 border-blue-400">Instagram-Kanal</a>.
+          </p>
+        </div>
+        <div x-cloak x-show.transition.in.duration.200.scale.50.origin.top="tab === 'soundcloud'" class="h-60">
+          <iframe class="w-full h-52" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/495241533&color=%23f59e0b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+          <div style="
+                  font-size: 10px;
+                  color: #cccccc;
+                  line-break: anywhere;
+                  word-break: normal;
+                  overflow: hidden;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
+                    Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+                  font-weight: 100;
+                ">
+            <a href="https://soundcloud.com/doddleoddlee" title="dodie" target="_blank" style="color: #cccccc; text-decoration: none">dodie</a>
+            ·
+            <a href="https://soundcloud.com/doddleoddlee/god-is-a-woman-dodie-clark-julia-nunes-orla-gartland" title="god is a woman - dodie clark, julia nunes, orla gartland" target="_blank" style="color: #cccccc; text-decoration: none">god is a woman - dodie clark, julia nunes, orla gartland</a>
+          </div>
+        </div>
+        <h1>Details</h1>
+        <div x-cloak x-show.transition.in.duration.200.scale.50.origin.top="tab === 'mail'" class="h-60">
+          <p class="pb-4">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis omnis iure inventore voluptatem, mollitia eius voluptas  beatae, repellat minus.
+            <a href="mailto:bea.bauer@gmail.com" title="E-Mail senden" class="font-bold border-b-2 bor">abx.eauer@gmail.com</a>.
+          </p>
+          <p>dolor sit amet consectetur adipisicing elit. Veritatis omnis iure inventore voluptatem, mollitia eius voluptas  beatae,</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="credits">
+    <p class="text-sm text-gray-200">
+      made by <a href="https://fabianwohlgemuth.de" class="underline">Hassan Ehsan</a>
+    </p>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.0/alpine.js'></script>
+</body>
+</html>

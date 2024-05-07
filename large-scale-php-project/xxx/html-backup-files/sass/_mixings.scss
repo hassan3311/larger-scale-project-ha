@@ -1,0 +1,255 @@
+/* responsive mixing
+/* ------------------------------------------------------------------------ */
+@mixin respond-to($media) {
+    @if $media == xxs {
+        @media (max-width: 320px) { @content; }
+    }
+    @if $media == xs-min {
+        @media (min-width: 480px) { @content; }
+    }
+    @if $media == sm-min {
+        @media (min-width: 768px) { @content; }
+    }
+    @if $media == md-min {
+        @media (min-width: 991px) { @content; }
+    }
+    @if $media == lg-min {
+        @media (min-width: 1200px) { @content; }
+    }
+    @if $media == xs-max {
+        @media (max-width: 480px) { @content; }
+    }
+    @if $media == sm-max {
+        @media (max-width: 768px) { @content; }
+    }
+    @if $media == md-max {
+        @media (max-width: 991px) { @content; }
+    }
+    @if $media == lg-max {
+        @media (max-width: 1200px) { @content; }
+    }
+    // @else {
+    //     @media only screen and (max-width: #{$media}) { @content; }
+    // }
+}
+/* @mixin typography($font_size, $line_height, $margin, $font_weight, $transform, $position)
+/* ------------------------------------------------------------------------ */
+@mixin typography2($font_size, $line_height, $margin, $font_weight) {
+    font-size: $font_size;
+    line-height: $line_height;
+    margin: $margin;
+    font-weight: $font_weight;
+}
+@mixin typography($font_size, $line_height, $font_weight, $transform, $spacing) {
+    font-size: $font_size;
+    line-height: $line_height;
+    font-weight: $font_weight;
+    text-transform: $transform;
+    letter-spacing: $spacing;
+}
+/* blockquote mixing
+/* ------------------------------------------------------------------------ */
+@mixin blockquote($text_align, $border_style, $border_width) {
+    text-align: $text_align;
+    border-style: $border_style;
+    border-width: $border_width;
+}
+/* blockquote mixing
+/* ------------------------------------------------------------------------ */
+@mixin thumb_content_padding($pad) {
+    padding-top: $pad;
+    padding-bottom: $pad;
+}
+/* list columns mixing
+/* ------------------------------------------------------------------------ */
+@mixin list-col($cols) {
+    columns: $cols;
+}
+/* anumations mixing
+/* ------------------------------------------------------------------------ */
+@mixin animation($str) {
+    animation: #{$str};
+}
+/* transition mixing
+/* ------------------------------------------------------------------------ */
+@mixin transition($transition...) {
+    transition: $transition;
+}
+/* opacity mixing
+/* ------------------------------------------------------------------------ */
+@mixin opacity($opacity) {
+    opacity: $opacity;
+}
+/* opacity mixing
+/* ------------------------------------------------------------------------ */
+// generic transform
+@mixin transform($transforms) {
+    transform: $transforms;
+}
+/* rotate mixing
+/* ------------------------------------------------------------------------ */
+@mixin rotate ($deg) {
+    @include transform(rotate(#{$deg}deg));
+}
+// rotateY
+@mixin rotateY ($deg) {
+    @include transform(rotateY(#{$deg}deg));
+}
+// rotateX
+@mixin rotateX ($deg) {
+    @include transform(rotateX(#{$deg}deg));
+}
+/* scale mixing
+/* ------------------------------------------------------------------------ */
+@mixin scale($scale) {
+    @include transform(scale($scale));
+}
+/* translate mixing
+/* ------------------------------------------------------------------------ */
+@mixin translate ($x, $y) {
+    @include transform(translate($x, $y));
+}
+// translate x
+@mixin translateX ($x) {
+    @include transform(translate($x,0));
+}
+// translate Y
+@mixin translateY ($y) {
+    @include transform(translate(0,$y));
+}
+// translate translate3d
+@mixin translate3d ($p) {
+    @include transform(translate3d($p, 0, 0));
+}
+@mixin translate3d_scale ($p,$deg) {
+    @include transform(translate3d($p, 0, 0) rotate(#{$deg}deg));
+}
+/* skew mixing
+/* ------------------------------------------------------------------------ */
+@mixin skew ($x, $y) {
+    @include transform(skew(#{$x}deg, #{$y}deg));
+}
+/* transform origin mixing
+/* ------------------------------------------------------------------------ */
+@mixin transform-origin ($origin) {
+    transform-origin: $origin;
+}
+/* border radius mixing
+/* ------------------------------------------------------------------------ */
+@mixin border-radius($radius) {
+    border-radius: $radius;
+}
+/* placeholder mixing
+/* ------------------------------------------------------------------------ */
+@mixin homey-placeholder($color: $input-placeholder) {
+    &::-moz-placeholder {
+        color: $color;
+        opacity: 1;
+    }
+    &:-ms-input-placeholder { 
+        color: $color; 
+    }
+    &::-webkit-input-placeholder  { 
+        color: $color; 
+    }
+    &:focus {
+        &::-moz-placeholder {
+            color: transparent;
+            opacity: 1;
+        }
+        &:-ms-input-placeholder { 
+            color: transparent; 
+        }
+        &::-webkit-input-placeholder  { 
+            color: transparent; 
+        }
+    }
+}
+/* social media colors
+/* ------------------------------------------------------------------------ */
+@mixin social_media_colors($social_media_color) {
+    color: $social_media_color;
+    &:hover,
+    &:focus,
+    &:active {
+        color: darken($social_media_color,5%) !important;
+    }
+}
+
+@mixin social_media_bg($parent, $social_media_colors) {
+    #{$parent} {
+        position: relative;
+        &:before {
+            @extend %animation-default;
+            content: '';
+            position: absolute;
+            width: 45px;
+            height: 45px;
+            background-color: $social_media_colors;
+            #{$start-direction}: 49%;
+            top: 49%;
+            color: $white;
+            @include translate(-50%,-50%);
+        }
+        &:hover,
+        &:focus,
+        &:active {
+            color: $white !important;
+            &:before {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+@mixin social_media_lined_colors($social_media_lined_colors) {
+    color: $social_media_lined_colors;
+    border: 1px solid $social_media_lined_colors;
+    &:hover,
+    &:focus,
+    &:active {
+        color: $white;
+        background-color: $social_media_lined_colors;
+    }
+}
+/* [converter] $parent hack
+/* ------------------------------------------------------------------------ */
+@mixin text-emphasis-variant($parent, $color) {
+    #{$parent} {
+        color: $color;
+    }
+    a#{$parent}:hover,
+    a#{$parent}:focus {
+        color: darken($color, 10%);
+    }
+}
+/* button colors
+/* ------------------------------------------------------------------------ */
+@mixin button-colors($color, $background, $border) {
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+    &:focus,
+    &:focus:active {
+        color: $color;
+        background-color: $background;
+        border-color: $border;
+    }
+    &:hover {
+        color: $color;
+        background-color: lighten($background, 10%);
+        border-color: lighten($border, 10%);
+    }
+    &:active {
+        color: $color;
+        background-color: lighten($background, 10%);
+        border-color: lighten($border, 10%);
+    }
+}
+/* vertical alignment
+/* ------------------------------------------------------------------------ */
+@mixin vertical-align() {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}

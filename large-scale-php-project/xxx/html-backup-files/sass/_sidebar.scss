@@ -1,0 +1,181 @@
+/* sidebar
+/* ------------------------------------------------------------------------ */
+.block-body-sidebar {
+	padding: 30px;
+}
+/* booking module
+/* ------------------------------------------------------------------------ */
+.sidebar-booking-module {
+	.sidebar-booking-module-header {
+		.block-body-sidebar {
+			padding: 20px 30px 15px;
+			background-color: $color-grey;
+			color: $white;
+		}
+	}
+	.sidebar-booking-module-body {
+		.block-body-sidebar {
+			padding: 20px 30px;
+			.spinner {
+				margin: 10px auto -10px;
+			}
+		}
+		.bs-searchbox .form-control {
+			@extend .display-none;
+		}
+	}
+	.payment-list {
+		margin: 15px 0;
+		ul {
+			@extend .margin-0;
+			padding: 15px 0 0;
+			@include respond-to(xs-max) {
+				padding: 5px 0 0;	
+			}
+		}
+	}
+	.text-small {
+		font-size: 12px;
+		color: $color-grey-light;
+	}
+	.search-date-range {
+		@extend .full-width;
+	}
+	.search-guests {
+		@extend .full-width;	
+	}
+	.search-guests-wrap {
+		@extend .right-0;
+		left: auto;
+	}
+	.search-date-range,
+	.search-guests {
+		margin-bottom: 10px;
+	}
+	.search-calendar {
+		@extend .right-0;
+		#{$start-direction}: auto;
+		transform: none;
+		@include respond-to(md-max) {
+			width: 100%;
+			#{$end-direction}: auto;
+			#{$start-direction}: 0;	
+		}
+	}
+}
+.search-extra-services {
+	padding-bottom: 10px;
+	.extra-services-list {
+		@extend .margin-0;
+		padding: 10px 0 0;
+	}
+	li {
+		@extend %clearfix;
+		margin-bottom: 5px;
+	}
+	.control {
+		@extend .float-left;
+		@extend .margin-0;
+	}
+	span {
+		@extend .float-right;	
+	}
+}
+.payment-list-detail-btn {
+	font-weight: 700;
+	font-size: 14px;
+}
+.sidebar-booking-module-footer {
+	border-top: 1px dotted $borders-default-color;
+	background-color: $white;
+	.block-body-sidebar {
+		padding: 30px 30px 0;
+	}
+	.social-icons {
+		background-color: rgba($color-grey-light,.12);
+		text-align: center;
+		padding: 12px 0;
+		a {
+			color: $color-grey-light;
+		}
+	}
+}
+.datepicker-sidebar-wrap {
+	.overlay-date-range {
+		margin-bottom: 10px;
+	}
+}
+.payment-list-price-detail-total-price {
+	font-size: 16px;
+	color: $black;
+	font-weight: 500;
+}
+.payment-list-price-detail-note {
+	color: $color-grey-light;
+	font-size: 14px;
+}
+/* overlay nav and search effects
+/* ------------------------------------------------------------------------ */
+.overlay-booking-btn {
+	@extend .fixed;
+	@extend .full-width;
+	bottom: 0;
+	z-index: 999;
+	padding: 15px;
+	background-color: $white;
+	border-top: 1px solid;
+	border-color: $brand-grey-lighter;
+	.trigger-overlay {
+		float: right;
+		padding: 0 20px;
+	}
+	.overlay-booking-price {
+		font-weight: 700;
+		font-size: 22px;
+		span {
+			font-size: 13px;
+		}
+	}
+	.rating {
+		line-height: 20px;
+	}
+}
+.overlay-booking-module {
+	@extend .fixed;
+	@extend .full-width;
+	@extend .top-0;
+	@extend .left-0;
+	padding: 70px 20px 20px;
+	visibility: hidden;
+	transform: translateY(100%);
+	transition: transform 0.5s, visibility 0s 0.5s;
+	z-index: 1000;
+	height: 100vh;
+	overflow: scroll;
+	background-color: $white;
+	&.open {
+		visibility: visible;
+		transform: translateY(0%);
+		transition: transform 0.5s;
+	}
+	&.close {
+		opacity: 1;
+	}
+	label {
+		margin-top: 6px;
+	}
+}
+.overlay-booking-module-close {
+	@extend .absolute;
+	@extend .right-0;
+	@extend .top-0;
+	z-index: 1;
+	font-size: 16px;
+	width: 70px;
+	height: 70px;
+}
+.admin-bar {
+	.overlay-booking-module {
+		top: 46px;
+	}
+}

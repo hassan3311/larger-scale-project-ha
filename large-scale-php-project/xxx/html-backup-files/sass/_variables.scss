@@ -1,0 +1,150 @@
+//@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
+//@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&family=Work+Sans:wght@300;400;600&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;600&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;600&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+//typo
+$font-primary: 'Helvetica Neue', sans-serif;
+
+$font-awesome:'FontAwesome';
+$font-icon: 'Simple-Line-Icons-Pro';
+
+$brand-primary:         #f15e75 !default; // #337ab7
+$brand-secondary:       #54c4d9 !default;
+$brand-success:         #85c341 !default;
+$brand-info:            #34b2e4 !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #c31b1b !default;
+
+$brand-grey:            #232323 !default;
+$brand-grey-light:      #949ca5 !default;
+$brand-grey-lighter:    #d8dce1 !default;
+
+
+//$brand-grey:            #d8dce1 !default;
+//$brand-dark-grey:       #949ca5 !default;
+
+//colors
+$color-primary:           $brand-primary !default;
+$color-secondary:         $brand-secondary !default;
+$color-success:           $brand-success !default;
+$color-info:              $brand-info !default;
+$color-warning:           $brand-warning !default;
+$color-danger:            $brand-danger !default;
+
+$color-grey:              $brand-grey !default;
+$color-grey-light:        $brand-grey-light !default;
+$color-grey-lighter:      $brand-grey-lighter !default;
+
+$color-border:            $brand-grey-lighter !default;
+$color-social-icons:      $brand-grey-light !default;
+
+$color-primary-hover:     darken($color-primary,5%) !default;
+$color-secondary-hover:   darken($color-secondary,5%) !default;
+
+$white:#fff !default;
+$black:#000 !default;
+$blue:#00aeef !default;
+$red:#c31b1b !default;
+
+
+
+$text-color: 				$brand-grey;
+$text-default-color:		#d7dce1 !default;
+$text-primary-color:		$color-primary;
+$text-success-color:		$color-success;
+$text-info-color:			$color-info;
+$text-danger-color:			$color-danger;
+
+$social-icons:              $color-social-icons;
+$input-placeholder:         #4f5962;
+$breadcrumb-color:          $brand-grey-light;
+$property-elements-color:   $color-social-icons;
+
+$rating-grey-color:         $brand-grey-light;
+$rating-color:              #f8b42b !default;
+
+
+//Bg colors
+$bg-primary:            $color-primary !default;
+$bg-secondary:          $color-secondary !default;
+$bg-grey:               $brand-grey !default;
+$bg-grey-light:         $brand-grey-light !default;
+$bg-grey-lighter:       $brand-grey-lighter !default;
+$body-bg:               #f7f8f9 !default;
+$footer-bg:             $brand-grey !default;
+$mobile-panel-bg:       #242424 !default;
+$mobile-menu-child-bg:  #fefefe !default;
+$drag-drop-bg:          #f7f8f9 !default;
+$progress-bar-bg:       $color-border !default;
+$progress-bar-top-bg:   $brand-secondary !default;
+$btn-dark-grey-bg:      #949ca5 !default;
+
+//border colors
+$borders-default-color:     $color-border;
+$border-primary-color:      $color-primary;
+$border-secondary-color:    $color-secondary;
+$input-border-color:        $borders-default-color;
+
+//shadow
+$block-shadow:0px 0px 3px rgba(0, 0, 0, 0.15) !default;
+$block-shadow-hover: 0 40px 50px rgba(0, 0, 0, 0.2) !default;
+
+// line height
+//$heading-line-hright: ;
+$text-line-height: 22px;
+$body-line-height: 1.6;
+
+//Buttons
+$btn-grey-color:                    #fff !default;
+$btn-grey-bg:                       $brand-grey !default;
+$btn-grey-border:                   darken($brand-grey,5%) !default;
+
+$btn-grey-light-color:               #fff !default;
+$btn-grey-light-bg:                  $brand-grey-light !default;
+$btn-grey-light-border:              darken($brand-grey-light,5%) !default;
+
+$btn-grey-lighter-color:               #fff !default;
+$btn-grey-lighter-bg:                  $brand-grey-lighter !default;
+$btn-grey-lighter-border:              darken($brand-grey-lighter,5%) !default ;
+
+//alerts
+$alert-success-bg: 			#EBF3E1 !default;
+$alert-success-border: 		#7ED321 !default;
+$alert-success-text:		#478700 !default;
+
+$alert-info-bg:				#E3F0F6 !default;
+$alert-info-border:			#34B2E4 !default;
+$alert-info-text:			#34B2E4 !default;
+
+$alert-warning-bg:			#F5E7CD !default;
+$alert-warning-border:		#F5A623 !default;
+$alert-warning-text:		#F5A623 !default;
+
+$alert-danger-bg: 			#F6C8C8 !default;
+$alert-danger-border:		#c31b1b !default;
+$alert-danger-text:			#c31b1b !default;
+
+
+// Social Media Colors
+// -----------------------------------------------------------
+$facebook: #506dab !default;
+$twitter: #00aced !default;
+$pinterest: #cb2027 !default;
+$instagram: #517fa4 !default;
+$google-plus: #dd4b39 !default;
+$linkedin: #007bb6 !default;
+$youtube: #bb0000 !default;
+$dribbble: #ea4c89 !default;
+$foursquare: #0072b1 !default;
+$flickr: #ff0084 !default;
+$vimeo: #aad450 !default;
+$tumblr: #32506d !default;
+$rss: #FF6600 !default;
+$email: #ccc !default;
+$apple: #999 !default;
+$android: #A4C639 !default;
+$windws: #2672EC !default;

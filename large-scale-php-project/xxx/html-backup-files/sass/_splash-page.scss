@@ -1,0 +1,54 @@
+/* splash page
+/* ------------------------------------------------------------------------ */
+.splash-page {
+	position: absolute !important;
+	@extend .full-width;
+	@extend .full-height;
+}
+.splash-page-inner {
+	@extend .full-height;
+}
+/* splash page slider
+/* ------------------------------------------------------------------------ */
+.splash-slider {
+	@extend .absolute;
+	@extend .full-width;
+	@extend .full-height;
+	@extend .top-0;
+	@extend .left-0;
+	z-index: -1;
+	.slick-list[style] {
+		height: 100% !important;
+	}
+	.slick-track {
+		@extend .full-height;
+	}
+	.splash-slider-item {
+		background-size: cover;
+	}
+}
+/* splash page video
+/* ------------------------------------------------------------------------ */
+.splash-video-background {
+	@extend .absolute;
+	@extend .full-width;
+	@extend .full-height;
+	@extend .top-0;
+	@extend .left-0;
+	z-index: -1;
+}
+/* splash page footer
+/* ------------------------------------------------------------------------ */
+.splash-page {
+	.footer {
+		.footer-copyright {
+			color: $white;
+		}
+		.footer-copyright,
+		.social-icons {
+			a {
+				color: $white;
+			}
+		}
+	}
+}

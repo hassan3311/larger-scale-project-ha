@@ -1,0 +1,47 @@
+/* Alerts
+/* ----------------------------------------------------------- */
+.alert-wrap {
+    @include respond-to(sm-max) {
+        margin-#{$start-direction}: -15px;
+        margin-#{$end-direction}: -15px;
+    }
+    @include respond-to(xs-max) {
+        margin-#{$start-direction}: 0;
+        margin-#{$end-direction}: 0;
+    }
+}
+.alert {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-#{$start-direction}: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    @include respond-to(xs-max) {
+        margin-top: 20px;
+    }
+    .close {
+        opacity: 1;
+        text-decoration: none;
+        font-size: 16px;
+        top: 3px;
+    }
+}
+.alert-success {
+    @include alert-variant($alert-success-bg, $alert-success-border, $alert-success-text);
+}
+.alert-info {
+    @include alert-variant($alert-info-bg, $alert-info-border, $alert-info-text);
+}
+.alert-warning {
+    @include alert-variant($alert-warning-bg, $alert-warning-border, $alert-warning-text);
+}
+.alert-danger {
+    @include alert-variant($alert-danger-bg, $alert-danger-border, $alert-danger-text);
+}
+.homey_notification {
+    .notify {
+        white-space: normal;
+        padding: 10px;
+        line-height: 24px;
+    }
+}

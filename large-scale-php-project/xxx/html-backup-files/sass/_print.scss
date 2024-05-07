@@ -1,0 +1,85 @@
+/* print
+/* ----------------------------------------------------------- */
+.print-main-wrap {
+    padding: 0 0 50px 0;
+    background-color: $white;
+    .block,
+    .block-bordered {
+        border-bottom: 1px dotted $color-border;
+        margin-bottom: 0;
+    }
+    .block-head,
+    .block-body {
+        padding: 30px 0;
+        border-bottom: none;
+    }
+    .block-section {
+        @extend %clearfix;
+        .block-left {
+            width: 30%;
+        }
+        .block-right {
+            width: 70%;
+        }
+    }
+    .block-col-25 {
+        width: 25%;
+    }
+    .item-price {
+        margin-top: 27px;
+    }
+    .top-section {
+        .block {
+            border-bottom: none;
+        }
+    }
+    .host-section {
+        .block-head {
+            padding: 30px 0 10px;
+        }
+        .block-body {
+            padding: 30px 0 0;
+        }
+        .media-left {
+            min-width: 60px;
+            padding-right: 15px;
+        }
+        .title {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    .gallery-block {
+        padding: 0;
+        .block-left,
+        .block-right {
+            width: calc(100% / 2 - 15px);
+            margin-top: 30px;
+        }
+    }
+    .availability-section {
+        margin-bottom: 0;
+    }
+    .qr-code {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+.print-wrap {
+    max-width: 768px;
+    margin: 0 auto;
+}
+.print-header {
+    padding: 30px 0;
+    border-bottom: 1px dotted $color-border;
+    text-align: center;
+    background-color: $white;
+}
+@media print {
+    .block-bordered,
+    .accomodation-section,
+    .host-section {
+        page-break-after: always;
+    }
+}

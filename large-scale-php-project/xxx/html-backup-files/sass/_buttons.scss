@@ -1,0 +1,329 @@
+/* buttons
+/* ----------------------------------------------------------- */
+button {
+    @extend %animation-2s;
+    &:active,
+    &:hover,
+    &:focus {
+        outline: none !important;
+    }
+}
+.btn,
+.wp-block-button__link,
+.wp-block-file .wp-block-file__button {
+    font-weight: 700;
+    line-height: 40px;
+    padding: 0 30px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 14px;
+    //font-size: 15px;
+    //font-size: 13px;
+    //min-width: 160px;
+    &:active,
+    &:focus,
+    &.active,
+    &.focus {
+        box-shadow: none;
+    }
+}
+.btn {
+    i {
+        margin-#{$end-direction}: 5px;
+    }
+}
+.wp-block-file .wp-block-file__button {
+    padding: 5px 10px;
+}
+.btn-blank {
+    @include button-colors($color-grey-light,transparent,transparent);
+}
+.btn-long {
+    padding-#{$start-direction}: 55px;
+    padding-#{$end-direction}: 55px;
+}
+.btn-slim {
+    line-height: 25px;
+    padding: 0 10px;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+.btn-full-width {
+    @extend .full-width;
+    padding-#{$start-direction}: 0;
+    padding-#{$end-direction}: 0;
+    margin-bottom: 10px;
+}
+.btn-half-width {
+    width: calc(50% - 10px);
+    padding-#{$start-direction}: 0;
+    padding-#{$end-direction}: 0;
+    margin-#{$end-direction}: 10px;   
+    min-width: auto;
+    &:last-of-type {
+        margin-right: 0;
+    }
+    @include respond-to(xs-max) {
+        width: 100%;
+        margin-#{$end-direction}: 0;
+        margin-bottom: 10px;
+    }
+}
+.btn-xs-full-width {
+    @include respond-to(xs-max) {
+        width: 100%;
+        margin-bottom: 10px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }    
+}
+.btn-sm-full-width {
+    @include respond-to(sm-max) {
+        width: 100%;
+        margin-bottom: 10px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }    
+}
+.btn-xs-half-width {
+    @include respond-to(xs-max) {
+        width: 50%;
+    }    
+}
+.btn-grey {
+    @include button-colors($btn-grey-color,$btn-grey-bg,$btn-grey-bg);
+}
+.btn-grey-light {
+    @include button-colors($btn-grey-light-color,$btn-grey-light-bg,$btn-grey-light-bg);
+}
+.btn-grey-lighter {
+    @include button-colors($btn-grey-lighter-color,$btn-grey-lighter-bg,$btn-grey-lighter-bg);
+}
+.btn-dark-grey {
+    @include button-colors($white,$btn-dark-grey-bg,$btn-dark-grey-bg); 
+}
+.btn-primary-outlined {
+    background-color: transparent;
+    &:hover,
+    &:active {
+        color:  $white;
+    }
+    &:focus {
+        background-color: transparent;
+    }
+}
+.btn-secondary-outlined {
+    background-color: transparent;
+    &:hover,
+    &:active {
+        color:  $white;
+    }
+    &:focus {
+        background-color: transparent;
+    }
+}
+.btn-grey-outlined {
+    color:  $brand-grey-light;
+    background-color: transparent;
+    border-color:  $brand-grey-lighter;
+    &:hover,
+    &:active {
+        color:  $white;
+        background-color: $brand-grey-light;
+        border-color:  $brand-grey-light;
+    }
+    &:focus {
+        color:  $brand-grey-light;
+        background-color: transparent;
+        border-color:  $brand-grey-lighter;
+    }
+}
+.btn-warning-outlined {
+    color:  $brand-warning;
+    @extend .background-color-transparent;
+    border-color:  $brand-warning;
+    &:hover,
+    &:active,
+    &:focus {
+        color:  $brand-warning;
+        background-color: transparent;
+        border-color:  $brand-warning;
+        cursor: default;
+    }
+}
+.btn-success-outlined {
+    color:  $brand-success;
+    @extend .background-color-transparent;
+    border-color:  $brand-success;
+    &:hover,
+    &:active,
+    &:focus {
+        color:  $brand-success;
+        background-color: transparent;
+        border-color:  $brand-success;
+        cursor: default;
+    }
+}
+.btn-danger-outlined {
+    color:  $brand-danger;
+    @extend .background-color-transparent;
+    border-color: $brand-danger;
+    &:hover,
+    &:active,
+    &:focus {
+        color:  $brand-danger;
+        @extend .background-color-transparent;
+        border-color:  $brand-danger;
+        cursor: default;
+    }
+}
+.btn-circle {
+    height: 40px;
+    width: 40px;
+    line-height: 36px;
+    border-radius: 40px;
+}
+.btn-preview-listing {
+    &:hover,
+    &:active,
+    &:focus {
+        color:  $white;
+    }
+}
+.btn-save-listing {
+    &:hover,
+    &:active,
+    &:focus {
+        color:  $white;
+        background-color: $brand-success;
+        border-color:  $brand-success;
+    }
+}
+.btn-delete-listing {
+    &:hover,
+    &:active,
+    &:focus {
+        color:  $white;
+        background-color: $brand-danger;
+        border-color:  $brand-danger;
+    }
+}
+.custom-actions {
+    white-space: nowrap;
+    @include respond-to(xs-max) {
+        float: none;
+        margin-bottom: 20px;
+    }
+    .btn-action,
+    .btn {
+        min-width: 34px;
+        height: 34px;
+        line-height: 30px;
+        margin-#{$start-direction}: 2px;
+        @extend .display-inline-block;
+        @extend .relative;
+    }
+    .btn {
+        //top: -2px;
+        padding: 0 12px;
+        // @include respond-to(xs-max) {
+            //     padding: 0;
+            // }
+        }
+        .btn-action {
+            background: none;
+            border: 1px solid;
+            text-align: center;
+            border-radius: 4px;
+            font-size: 14px;
+            &:first-child {
+                @extend .margin-0;
+            }
+            &:hover,
+            &:focus {
+                color: $white;
+            }
+            span {
+                width: 35px;
+                height: 35px;
+                line-height: 33px;
+                @extend .display-inline-block;
+            }
+        }
+        span {
+            margin-#{$start-direction}: 2px;
+            @extend .display-inline-block;
+        }
+    }
+    .btn-step-back {
+        margin-#{$end-direction}: 10px;
+    }
+    .btn-search-icon {
+        padding: 0;
+        width: 42px;
+        height: 42px;
+    }
+    .btn-facebook-lined {
+        @include social_media_lined_colors($facebook);
+        @extend .relative;
+        background-color: transparent;
+        i {
+            @extend .absolute;
+            #{$start-direction}: 15px;
+            top: 13px;
+        }
+    }
+    .btn-google-plus-lined {
+        @include social_media_lined_colors($google-plus);
+        @extend .relative;
+        background-color: transparent;
+        i {
+            @extend .absolute;
+            #{$start-direction}: 15px;
+            top: 13px;
+        }
+    }
+    .btn-booking {
+        @include button-colors($white,$brand-success,$brand-success);
+        line-height: 50px;
+    }
+    .btn-reserve-period {
+        width: auto !important;
+        // @include respond-to(xs-max) {
+            //     display: none !important;
+            // }
+        }
+        .btn-reserve-period-mobile {
+            display: none !important;
+            @include respond-to(xs-max) {
+                display: inline-block !important;
+            }
+        }
+        .admin-top-banner-btn {
+            color:  $brand-success;
+            @extend .background-color-transparent;
+            border-color:  $brand-success;
+            &:hover,
+            &:active,
+            &:focus {
+                color:  $white;
+                background-color: $brand-success;
+                border-color:  $brand-success;
+            }
+        }
+/* vc buttons
+/* ----------------------------------------------------------- */
+.vc_btn3 {
+    font-weight: 700;
+    line-height: 40px;
+    padding: 0 30px;
+    text-align: center;
+}
+.vc_btn3.vc_btn3-style-custom {
+    background-image: none;
+    &:hover {
+        opacity: 0.75;
+    }
+}

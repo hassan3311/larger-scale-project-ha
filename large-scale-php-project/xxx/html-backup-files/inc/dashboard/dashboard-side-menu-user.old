@@ -1,0 +1,30 @@
+<!-- start side menu -->
+<div class="user-dashboard-left white-bg">
+    <div class="navi">
+        <ul class="board-panel-menu">
+            <li>
+                <a href="dashboard-user.php" data-toggle="tooltip" data-placement="right" title="Dashboard"><i class="homey-icon homey-icon-house-2"></i><!-- Dashboard --></a>
+            </li>
+            <li>
+                <a href="dashboard-profile-user.php" data-toggle="tooltip" data-placement="right" title="Profile"><i class="homey-icon homey-icon-single-neutral-circle"></i> <!-- Profile --></a></li>
+            <li>
+                <a href="dashboard-reservations-user.php" data-toggle="tooltip" data-placement="right" title="Reservations"><i class="homey-icon homey-icon-calendar-3"></i><!-- Reservations --></a>
+            </li>
+            <li>
+                <a href="dashboard-messages.php" data-toggle="tooltip" data-placement="right" title="Messages"><i class="homey-icon homey-icon-messages-bubble-text-1-messages-chat-smileys"></i><!-- Messages --></a>
+            </li>
+            <li>
+                <a href="dashboard-favorites.php" data-toggle="tooltip" data-placement="right" title="Favorites"><i class="homey-icon love-it"></i><!-- Favorites --></a>
+            </li>
+            <li>
+                <a href="dashboard-saved-searches.php" data-toggle="tooltip" data-placement="right" title="Saved Searches"><i class="homey-icon homey-icon-search-1"></i><!-- Saved searches --></a>
+            </li>
+            <li>
+                <a href="dashboard-invoices.php" data-toggle="tooltip" data-placement="right" title="Invoices"><i class="homey-icon homey-icon-common-file-text-files-folders"></i><!-- Saved searches --></a>
+            </li>
+            <li>
+                <a href="#" data-toggle="tooltip" data-placement="right" title="Log Out"><i class="homey-icon login-interface-essential"></i><!-- Log out --></a>
+            </li>
+        </ul>
+    </div>
+</div>

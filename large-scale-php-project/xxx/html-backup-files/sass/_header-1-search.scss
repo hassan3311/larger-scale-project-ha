@@ -1,0 +1,503 @@
+/* header 1 search
+/* ----------------------------------------------------------- */
+.header-search {
+	.fa {
+		font-size: 14px;
+		color: $btn-dark-grey-bg;
+		@extend .margin-0;
+		@include respond-to(xs-max) {
+			font-size: 16px;
+		}
+	}
+}
+.header-1-search-wrap {
+	height: 50px;
+	.input-group-addon {
+		padding: 12px 16px;
+	}
+	.form-control {
+		padding: 0;	
+	}
+	.search-wrap,
+	.datepicker-wrap,
+	.guest-select-wrap {
+		@extend .display-inline-block;
+		box-shadow: 1px 0 0 $brand-grey-lighter inset;
+	}
+	.form-control,
+	.bootstrap-select {
+		height: 50px;
+	}
+	.search-wrap {
+		@include respond-to(sm-min) {
+			width: 294px;
+		}
+		@include respond-to(md-min) {
+			width: 494px;
+		}
+		@include respond-to(lg-min) {
+			width: 665px;
+		}
+	}
+	.input-search {
+		@include respond-to(sm-min) {
+			width: 158px !important;
+		}
+		@include respond-to(md-min) {
+			width: 357px !important;
+		}
+		@include respond-to(lg-min) {
+			width: 528px !important;
+		}
+	}
+	.datepicker-wrap {
+		@include respond-to(sm-min) {
+			width: 230px;
+		}
+		@include respond-to(lg-min) {
+			width: 228px;
+		}
+	}
+	.guest-select-wrap {
+		@include respond-to(sm-min) {
+			width: 140px;
+		}
+		@include respond-to(md-min) {
+			width: 160px;
+		}
+		@include respond-to(lg-min) {
+			width: 189px;
+		}
+	}
+	.open > .btn-default.dropdown-toggle {
+		color: $btn-dark-grey-bg;	
+	}
+	button[type="submit"] {
+		border-radius: 0;
+		height: 50px;
+		width: 50px;
+		background: $drag-drop-bg;
+		padding: 0; 
+		border-#{$start-direction}: 1px solid $brand-grey-lighter;
+		border-#{$end-direction}: 1px solid $brand-grey-lighter;
+		@extend .float-right;
+		@extend .absolute;
+		&:hover {
+			background: $brand-primary;
+			.fa {
+				color: $white;
+			}
+		}
+	}
+}
+.guest-select-wrap {
+	.dropdown-menu {
+		width: 190px;
+		#{$start-direction}: -50px;
+		border: 1px solid $brand-grey-lighter;
+		top: 100% !important;
+		@include respond-to(lg-max) {
+			width: calc(100% + 70px);
+		}
+		@include respond-to(md-max) {
+			width: calc(100% + 70px);
+		}
+		a {
+			padding: 15px 20px !important;
+		}
+	}
+	.filter-option {
+		color: $btn-dark-grey-bg;
+	}
+}
+/* Datepicker
+/* ----------------------------------------------------------- */
+.datepicker-wrap {
+	padding: 0;
+	.form-control {
+		height: 50px;
+		color: $btn-dark-grey-bg;
+	}
+	.input-group {
+		@extend .full-width;
+	}
+}
+.daterangepicker {
+	padding: 20px;
+	border: 1px solid $brand-grey-lighter;
+	@include respond-to(xs-max) {
+		padding: 0;
+	}
+	&.openscenter {
+		@extend .margin-0;
+	}
+	.calendar {
+		max-width: none;
+		td, th {
+			min-width: 40px;
+			height: 40px;
+		}
+	}
+	.input-mini {
+		height: 40px;
+		padding: 0 6px 0 35px;
+		&.active {
+			border: 1px solid;
+		}
+	}
+	.daterangepicker_input i {
+		@extend .absolute;
+		left: 13px;
+		top: 13px;
+	}
+}
+.daterangepicker.dropdown-menu {
+	z-index: 3004;
+}
+.daterangepicker td,
+.daterangepicker td.off, 
+.daterangepicker td.off.in-range, 
+.daterangepicker td.off.start-date, 
+.daterangepicker td.off.end-date {
+	// border: 1px solid $brand-grey-lighter;
+	color: $btn-dark-grey-bg;
+}
+.daterangepicker td.in-range.end-date {
+	color: $white;
+}
+.daterangepicker td.active, 
+.daterangepicker td.active:hover,
+.daterangepicker td.available:hover, 
+.daterangepicker th.available:hover  {
+	font-weight: 700;
+	color: $white;
+}
+.daterangepicker td.off {
+	background: rgba($brand-grey-lighter, .2);
+}
+.daterangepicker .calendar-table {
+	@extend .padding-0;
+}
+.daterangepicker,
+.daterangepicker .input-mini,
+.daterangepicker .input-mini.active,
+.daterangepicker td.start-date.end-date,
+.daterangepicker .calendar td,
+.daterangepicker .calendar-table {
+	border-radius: 0;
+}
+.daterangepicker.opensleft:before {
+	#{$end-direction}: 39px;
+}
+.daterangepicker.opensleft:after {
+	#{$end-direction}: 40px;
+}
+/* Filters
+/* ----------------------------------------------------------- */
+.search-filter {
+	@extend .display-none;
+	@extend .relative;
+	&.search-filter-open {
+		@extend .display-block;
+	}
+}
+.search-filter-btn {
+	cursor: pointer;
+	color: $btn-dark-grey-bg;
+}
+.filter-text {
+	@extend .relative;
+	#{$start-direction}: -3px;
+	font-weight: 500;
+}
+.search-filter-wrap {
+	background-color: $white;
+	padding: 3px 30px 15px;
+	border: 1px solid $brand-grey-lighter;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+	@extend .absolute;
+	z-index: 3;
+	width: 100%;
+}
+.filters-wrap {
+	padding: 10px 0;
+	border-bottom: 1px dashed $brand-grey-lighter;
+	.bootstrap-select {
+		@include respond-to(sm-max) {
+			margin-bottom: 20px;
+		}
+	}
+}
+.filters {
+	@extend .display-table-cell;
+	height: 40px;
+	@extend .v-middle;
+	a[data-toggle="collapse"] {
+		@extend .relative;
+		top: 4px;
+	}
+	.control {
+		@extend .display-inline-block;
+		margin-top: 10px;
+		margin-#{$end-direction}: 3px;
+		margin-bottom: 1px;
+		margin-#{$start-direction}: 0;
+		@include respond-to(lg-max) {
+			margin: 10px 13px 10px 0;
+			margin-top: 10px;
+			margin-#{$end-direction}: 13px;
+			margin-bottom: 10px;
+			margin-#{$start-direction}: 0;
+		}
+		&:last-of-type {
+			margin-#{$end-direction}: 0;
+		}
+	}
+}
+.search-filter-footer {
+	padding-top: 15px;
+}
+.filter-more-link {
+	@extend .relative;
+	top: -1px;
+	#{$start-direction}: -3px;
+}
+.form-control,
+.bootstrap-select .btn,
+.guest-select-wrap .btn,
+.search-filter-btn,
+.control {
+	font-weight: 500;
+	font-size: 14px;
+}
+/* Mobile Search
+/* ----------------------------------------------------------- */
+.mobile-header-search-wrap {
+	border: none;
+	.search-wrap {
+		@extend .full-width;
+		box-shadow: none;
+		.input-group {
+			@extend .full-width;
+		}
+	}
+	.trigger-search-overlay {
+		border: none;
+	}
+}
+.mobile-search {
+	background-color: $white;
+	padding: 20px;
+	border-bottom: 1px dashed $brand-grey-lighter;
+	.input-search,
+	.mobile-date-range,
+	.bootstrap-select .btn {
+		border: none;
+		@extend .padding-0;
+	}
+	.search-wrap,
+	.datepicker-wrap,
+	.guest-select-wrap {
+		border: 1px solid $brand-grey-lighter;
+	}
+	.bootstrap-select {
+		@extend .full-width
+	}
+	.datepicker-wrap .form-control {
+		height: 40px;
+		@extend .margin-0;
+	}
+}
+
+
+.daterangepicker .calendar td, 
+.daterangepicker .calendar .widget_calendar table th, 
+.widget_calendar table .daterangepicker .calendar th, 
+.daterangepicker .calendar .widget-calendar table th, 
+.widget-calendar table .daterangepicker .calendar th, 
+.daterangepicker .calendar th {
+	min-width: 38px;
+}
+.daterangepicker .calendar td, 
+.daterangepicker .calendar .widget_calendar table th, 
+.widget_calendar table .daterangepicker .calendar th, 
+.daterangepicker .calendar .widget-calendar table th, 
+.widget-calendar table .daterangepicker .calendar th, 
+.daterangepicker .calendar th {
+	@include respond-to(xxs) {
+		min-width: 30px;
+	}
+}
+.mobile-search {
+	.input-group .fa {
+		font-size: 16px;
+		color: $btn-dark-grey-bg;
+	}
+	.btn {
+		@extend .full-width;
+	}
+}
+
+/* Full Width Search
+/* ----------------------------------------------------------- */
+.header-1-search-full-width {
+	.search-wrap {
+		@include respond-to(sm-min) {
+			width: calc(100% - 446px);
+		}
+		@include respond-to(md-min) {
+			width: calc(100% - 446px);
+		}
+		@include respond-to(lg-min) {
+			width: calc(100% - 475px);
+		}
+		.input-group {
+			@extend .full-width;
+		}
+	}
+}
+
+/* Variuos Header
+/* ----------------------------------------------------------- */
+.main-search-wrap,
+.search-wrap,
+.guest-select-wrap,
+.datepicker-wrap {
+	.input-group-addon {
+		background-color: transparent;
+		border: none;
+		border-radius: 0;
+		width: 50px !important;
+	}
+}
+.main-search-wrap {
+	.form-control,
+	.bootstrap-select .btn {
+		border: transparent;
+	}
+}
+.header-1-search-wrap .bootstrap-select .btn {
+	min-width: 130px;
+	padding: 0;
+	@include respond-to(lg-max) {
+		min-width: 90px;
+	}
+}
+/* overlay nav and search effects
+/* ------------------------------------------------------------------------ */
+.overlay-search-module-module,
+.overlay-search-module-module .block,
+.overlay-search-module-body,
+.block-body-overlay-search-module {
+	@extend .fixed;
+	@extend .full-width;
+	@extend .full-height;
+	overflow-y: scroll;
+}
+
+.overlay-search-btn {
+	@extend .fixed;
+	@extend .full-width;
+	bottom: -10px;
+	z-index: 8;
+	.trigger-overlay {
+		border-radius: 0;
+	}
+}
+.overlay-search-module {
+	@extend .fixed;
+	@extend .full-width;
+	@extend .top-0;
+	@extend .left-0;
+	visibility: hidden;
+	transform: translateY(100%);
+	//transition: transform 0.3s, visibility 0s 0.3s;
+	z-index: 9;
+	height: 100%;
+	overflow-y: scroll;
+	background-color: $white;
+	&.open {
+		visibility: visible;
+		transform: translateY(0%);
+		transition: transform 0.3s;
+	}
+	&.close {
+		opacity: 1;
+	}
+	label {
+		margin-top: 6px;
+	}
+}
+.overlay-search-module-close {
+	//@extend .float-right;
+	@extend .absolute;
+	z-index: 1;
+	font-size: 16px;
+	width: 70px;
+	height: 70px;
+	#{$end-direction}: 0;
+}
+.block-body-overlay-search-module {
+	padding: 30px;
+}
+.overlay-search-field {
+	border-radius: 0;
+	border-top: none;
+	border-#{$start-direction}: none;
+	border-#{$end-direction}: none;
+	font-size: 18px;
+	font-weight: 400;
+	padding: 0;
+}
+.overlay-search-button {
+	@extend .fixed;
+	@extend .left-0;
+	@extend .bottom-0;
+	margin-bottom: 0;
+	border-radius: 0;
+	z-index: 4;
+}
+.overlay-search-module-module {
+	.search-filter {
+		display: block;
+	}
+	.search-filter-wrap {
+		box-shadow: none;
+		padding: 0;
+		border: none;
+	}
+	.search-filter-footer {
+		@extend .display-none;
+	}
+	.filters {
+		.control {
+			width: 40%;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

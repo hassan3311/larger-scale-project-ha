@@ -1,0 +1,217 @@
+/* booking page
+/* ----------------------------------------------------------- */
+.booking-page {
+	margin-bottom: 90px;
+	.page-title {
+		margin: 50px 0;
+	}
+}
+.edit-booking-form {
+	float: #{$end-direction};
+	font-size: 14px;
+}
+.continue-block-button {
+	padding-top: 30px;
+}
+.title .circle-icon {
+	@extend .relative;
+	color: $white;
+	font-size: 14px;
+	font-weight: 700 !important;
+	display: inline-block;
+	width: 34px;
+	height: 34px;
+	text-align: center;
+	border-radius: 50%;
+	margin-#{$end-direction}: 5px;
+}
+.rental-agreement-download {
+	margin: 30px 0 40px;
+}
+/* booking page - message block
+/* ----------------------------------------------------------- */
+.msg-send-block-host-avatar {
+	margin-bottom: 20px;
+	img {
+		@extend .float-left;
+		width: 60px;
+		height: auto;
+	}
+	h4 {
+		@extend .margin-0;
+	}
+	p {
+		@extend .margin-0;
+	}
+}
+.msg-send-block-host-info {
+	@extend .float-left;
+	padding-top: 10px;
+	padding-#{$end-direction}: 0;
+	padding-bottom: 0;
+	padding-#{$start-direction}: 10px;
+}
+/* booking page - rules block
+/* ----------------------------------------------------------- */
+.rules-options {
+	li {
+		border-bottom: 1px dotted $borders-default-color;
+		padding: 5px 0;
+		span {
+			@extend .float-right;
+			font-weight: 600;
+		}
+	}
+}
+/* booking page - payment block
+/* ----------------------------------------------------------- */
+.payment-method-block {
+	.form-group {
+		margin-bottom: -1px;
+	}
+	.radio-tab {
+		padding: 30px 60px;
+		.control__indicator {
+			#{$start-direction}: 20px;
+			#{$end-direction}: auto;
+		}
+		.control-text {
+			font-weight: 700;
+			font-size: 16px;
+		}
+	}
+	.radio-tab-inner {
+		border-radius: 0;
+	}
+	&:first-of-type .radio-tab-inner {
+		border-top-#{$start-direction}-radius: 4px;
+		border-top-#{$end-direction}-radius: 4px;
+		border-bottom-#{$end-direction}-radius: 0;
+		border-bottom-#{$start-direction}-radius: 0;
+	}
+	&:last-of-type .radio-tab-inner {
+		border-top-#{$start-direction}-radius: 0;
+		border-top-#{$end-direction}-radius: 0;
+		border-bottom-#{$end-direction}-radius: 4px;
+		border-bottom-#{$start-direction}-radius: 4px;
+	}
+}
+.paypal-method,
+.stripe-method,
+.twocheckout-method {
+	background: url(../img/cc-cards.png) no-repeat 93% center;
+	@include respond-to(sm-max) {
+		background-size: 40%;
+	}
+}
+.wire-method {
+	white-space: nowrap;
+	.radio-tab {
+		@include respond-to(sm-max) {
+			padding: 20px 60px 40px;
+			position: relative;
+			left: 2px;
+		}
+	}
+}
+.booking-sidebar {
+	.block {
+		background-color: $white;
+	}
+	.payment-list ul,
+	.payment-list ul .payment-due {
+		padding-bottom: 0;
+		margin-bottom: 0;	
+	}
+}
+/* booking page - booking data
+/* ----------------------------------------------------------- */
+.booking-property {
+	padding: 40px 40px 0;
+}
+.booking-data {
+	background-color: rgba($text-color, .05);
+	border: 1px dotted $borders-default-color;
+	margin-bottom: 30px;
+	border-radius: 4px;
+}
+.booking-property-img {
+	@extend .float-right;
+	width: calc(100% / 2);
+	img {
+		width: 160px;
+	}
+}
+.booking-property-info,
+.booking-data-arrive,
+.booking-data-depart {
+	@extend .float-left;
+	width: calc(100% / 2);
+}
+.booking-data-arrive {
+	border-#{$end-direction}: 1px dotted $borders-default-color;
+}
+.booking-data-guests {
+	border-top: 1px dotted $borders-default-color;
+	clear: both;
+}
+.booking-data-block {
+	padding: 8px 12px;
+}
+.booking-data-top {
+	.fa {
+		margin-#{$end-direction}: 5px;
+	}
+}
+.booking-data-bottom {
+	font-size: 16px;
+	color: $black;
+}
+
+/* membership page
+/* ----------------------------------------------------------- */
+.membership-package-wrap,
+.membership-nav-wrap,
+.membership-note {
+	margin-bottom: 30px;
+}
+.membership-nav-wrap {
+	display: flex;
+	justify-content: space-between;
+}
+.recurring-payment-wrap {
+	border-bottom: 1px solid $borders-default-color;
+	border-#{$start-direction}: 1px solid $borders-default-color;
+	border-#{$end-direction}: 1px solid $borders-default-color;
+	padding: 15px 10px 10px;
+	margin-bottom: 20px;
+	.control {
+		@extend .margin-0;
+	}
+}
+.membership-package-order-detail {
+	margin: 0 0 30px;
+	li {
+		border-bottom: 1px dotted $borders-default-color;
+	}
+	.total-price {
+		border-top: 2px solid $black;
+		border-bottom: none;
+		padding: 20px 0 0;
+	}
+}
+.mebership-list-info {
+	@extend .margin-0;
+	li {
+		clear: both;
+		border-bottom: 1px solid $borders-default-color;
+		padding: 8px 0;
+		strong {
+			@extend .float-right;
+		}
+	}
+}
+
+
+
+

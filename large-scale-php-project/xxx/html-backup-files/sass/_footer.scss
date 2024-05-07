@@ -1,0 +1,59 @@
+/* footer
+/* ------------------------------------------------------------------------ */
+.footer-top-wrap {
+	padding: 100px 0 30px;
+	@include respond-to(sm-max) {
+		padding: 50px 0 30px;
+	}
+}
+.footer-bottom-wrap {
+	padding: 10px 0;
+}
+.footer {
+	.social-icons {
+		text-align: #{$end-direction};
+		@include respond-to(md-max) {
+			text-align: center;
+		}
+	}
+}
+.footer-copyright {
+	font-size: 14px;
+	line-height: 24px;
+	padding: 12px 0;
+	@include respond-to(md-max) {
+		text-align: center;
+	}
+}
+/* footer - dashboard
+/* ------------------------------------------------------------------------ */
+.footer-dashboard {
+	@extend .fixed;
+	@extend .bottom-0;
+	@extend .full-width;
+	z-index: 1;
+	@include respond-to(md-max) {
+		position: relative;
+	}
+}
+/* footer - splash page
+/* ------------------------------------------------------------------------ */
+.splash-page {
+	.footer-bottom-wrap {
+		background-color: transparent;
+	}
+	.footer-dashboard {
+		@include respond-to(sm-max) {
+			position: fixed;
+		}
+	}
+}
+/* footer - single listing mobile
+/* ------------------------------------------------------------------------ */
+.single-listing {
+	.footer-bottom-wrap {
+		@include respond-to(sm-max) {
+			margin-bottom: 60px;
+		}
+	}
+}

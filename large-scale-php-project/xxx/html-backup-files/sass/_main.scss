@@ -1,0 +1,54 @@
+// Core variables and mixins
+@import 'variables.scss';
+@import 'mixings.scss';
+@import 'extends.scss';
+@import 'bootstrap/variables';
+@import 'bootstrap/mixins';
+
+// Core global css
+//@import 'fonts.scss';
+@import 'typography.scss';
+@import 'global.scss';
+@import 'buttons.scss';
+@import 'alerts.scss';
+@import 'animations.scss';
+
+// Core template parts
+@import 'layout.scss';
+@import 'modules.scss';
+@import 'dashboard.scss';
+@import 'item.scss';
+@import 'item_experience.scss';
+@import 'properties.scss';
+@import 'reviews.scss';
+@import 'pagination.scss';
+@import 'widgets.scss';
+@import 'header.scss';
+@import 'search.scss';
+@import 'top-bar.scss';
+@import 'sidebar.scss';
+@import 'footer.scss';
+@import 'maps.scss';
+@import 'booking-page.scss';
+@import 'host-profile.scss';
+@import 'blog.scss';
+@import 'splash-page.scss';
+
+// Core page templates
+@import 'banners.scss';
+@import 'listing.scss';
+@import 'half-map.scss';
+@import 'compare.scss';
+
+// plugins parts
+@import 'calendar.scss';
+@import 'rating.scss';
+@import 'breadcrumbs.scss';
+@import 'social-icons.scss';
+@import 'half-map-search.scss';
+@import 'slick.scss';
+@import 'contact_form_7.scss';
+
+@import 'help-classes.scss';
+// print
+@import 'print.scss';

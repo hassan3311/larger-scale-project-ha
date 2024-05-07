@@ -1,0 +1,668 @@
+@import 'variables.scss';
+@import 'mixings.scss';
+
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+/* general colors
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+
+/* primary color
+/* ----------------------------------------------------------- */
+.primary-color,
+.btn-primary-outlined {
+	color: $color-primary;
+}
+.pagination > .active > a, 
+.pagination > .active > a:focus, 
+.pagination > .active > a:hover, 
+.pagination > .active > span, 
+.pagination > .active > span:focus, 
+.pagination > .active > span:hover,
+.btn-primary-outlined,
+.btn-primary-outlined,
+.searchform button {
+	border-color: $color-primary;	
+}
+.pagination > .active > a, 
+.pagination > .active > a:focus, 
+.pagination > .active > a:hover, 
+.pagination > .active > span, 
+.pagination > .active > span:focus, 
+.pagination > .active > span:hover,
+.media-signal .signal-icon,
+.account-loggedin:before,
+.single-blog-article .meta-tags a,
+.title .circle-icon,
+.label-primary,
+.searchform button,
+.next-prev-block .prev-box, 
+.next-prev-block .next-box{
+	background-color: $color-primary;	
+}
+// .taxonomy-card .taxonomy-title {
+// 	background: rgba($brand-primary, .75);
+// }
+.slick-prev, 
+.slick-next {
+	color: $brand-primary;
+	border: 1px solid $brand-primary;
+	background-color: transparent;
+	&:before {
+		color: $brand-primary;
+	}
+	&:hover {
+		&:before {
+			color: $white; /* don't add this in styling options */
+		}
+	}
+}
+.header-slider {
+	.slick-prev, 
+	.slick-next {
+		border: 1px solid $brand-primary;
+		background-color: $brand-primary;
+		&:before {
+			color: $white; /* don't add this in styling options */
+		}
+	}
+}
+.widget-slider {
+	.slick-next,
+	.slick-next {
+		&:hover {
+			&:before {
+				color: $white; /* don't add this in styling options */
+			}
+		}
+	}
+}
+
+.nav-tabs > li.active > a {
+	box-shadow: 0px -2px 0px 0px inset $color-primary;
+}
+/* primary color :hover
+/* ----------------------------------------------------------- */
+.btn-primary-outlined:focus,
+.crncy-lang-block > li:hover a,
+.crncy-lang-block .dropdown-menu li:hover  {
+	color: $color-primary;
+}
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.table-hover > tbody > tr:hover,
+.search-auto-complete li:hover,
+.btn-primary-outlined:hover,
+.btn-primary-outlined:active,
+.item-tools .dropdown-menu > li > a:hover {
+	background-color: $color-primary;	
+}
+.slick-prev, 
+.slick-next {
+	&:focus,
+	&:active {
+		color: $brand-primary;
+		border: 1px solid $brand-primary;
+		background-color: transparent;
+	}
+	&:hover {
+		background-color: $brand-primary;
+		border: 1px solid $brand-primary;
+		color: $white;
+	}
+}
+.header-slider {
+	.slick-prev:focus, 
+	.slick-next:active {
+		border: 1px solid $brand-primary;
+		background-color: $brand-primary;
+		&:before {
+			color: $white; /* don't add this in styling options */
+		}
+	}
+	.slick-prev, 
+	.slick-next {
+		&:hover {
+			background-color: rgba($brand-primary, .65);
+			border: 1px solid $brand-primary;
+			&:before {
+				color: $white; /* don't add this in styling options */
+			}
+		}
+	}
+}
+
+/* secondary color
+/* ----------------------------------------------------------- */
+.secondary-color,
+.btn-secondary-outlined,
+.taber-nav li.active a,
+.saved-search-block .saved-search-icon,
+.block-title .help,
+.custom-actions .btn-action,
+.daterangepicker .input-mini.active + i,
+.daterangepicker td.in-range,
+.payment-list-detail-btn {
+	color: $color-secondary;	
+}
+.daterangepicker td.active, 
+.daterangepicker td.active.end-date,
+.homy-progress-bar .progress-bar-inner,
+.fc-event,
+.property-calendar .current-day,
+.label-secondary,
+.wallet-label  {
+	background-color: $color-secondary;	
+}
+.availability-section .search-calendar .days li.day-available.current-day {
+	background-color: $color-secondary !important;	
+}
+.daterangepicker .input-mini.active,
+.daterangepicker td.in-range,
+.msg-unread {
+	background-color: rgba($color-secondary, .2);
+}
+.msgs-reply-list .msg-me {
+	background-color: rgba($color-secondary, .1) !important;
+}
+.control {
+	input:checked ~ .control-text {
+		color: $color-secondary;
+	}
+	input:checked ~ .control__indicator {
+        background-color: lighten($color-secondary,10%); //$color-secondary 10% opcity
+        border-color: darken($color-secondary,15%); //$color-secondary 15% opcity
+    }
+    input:checked:focus ~ .control__indicator,
+    input:checked:active ~ .control__indicator {
+        background-color: darken($color-secondary,15%); //$color-secondary 15% opcity
+        border-color: darken($color-secondary,10%); //$color-secondary 10% opcity
+    }
+    input:focus ~ .control__indicator {
+        background-color: lighten($color-secondary,10%); //$color-secondary 10% opcity
+        border-color: darken($color-secondary,15%); //$color-secondary 15% opcity
+    }
+}
+.open > .btn-default.dropdown-toggle,
+.custom-actions .btn-action,
+.daterangepicker .input-mini.active,
+.msg-unread,
+.btn-secondary-outlined {
+	border-color: $color-secondary;
+}
+.bootstrap-select .btn:focus,
+.bootstrap-select .btn:active {
+	border-color: $color-secondary !important;
+}
+
+/* secondary color :hover
+/* ----------------------------------------------------------- */
+.taber-nav li:hover a, 
+.payment-list-detail-btn:hover,
+.payment-list-detail-btn:focus {
+	color: $color-secondary;	
+}
+.header-comp-search .form-control:focus {
+	background-color: rgba($color-secondary, .2);
+}
+.bootstrap-select.btn-group .dropdown-menu a:hover,
+.daterangepicker td.active:hover,
+.daterangepicker td.available:hover, 
+.daterangepicker th.available:hover,
+.custom-actions .btn-action:hover,
+.calendar-table .prev:hover,
+.calendar-table .next:hover,
+.btn-secondary-outlined:hover,
+.btn-secondary-outlined:active,
+.btn-preview-listing:hover,
+.btn-preview-listing:active,
+.btn-preview-listing:focus,
+.btn-action:hover,
+.btn-action:active,
+.btn-action:focus {
+	background-color: $color-secondary;	
+}
+.search-calendar .days li:hover:not(.day-disabled) {
+	background-color: rgba($brand-secondary, .2);
+}
+.form-control:focus,
+.open > .btn-default.dropdown-toggle:hover,
+.open > .btn-default.dropdown-toggle:focus,
+.open > .btn-default.dropdown-toggle:active,
+.header-comp-search .form-control:focus,
+.btn-secondary-outlined:hover,
+.btn-secondary-outlined:active,
+.btn-secondary-outlined:focus,
+.btn-preview-listing:hover,
+.btn-preview-listing:active,
+.btn-preview-listing:focus {
+	border-color: $color-secondary;
+}
+.bootstrap-select .btn:focus,
+.bootstrap-select .btn:active {
+	border-color: $color-secondary !important;
+}
+/* body bg color
+/* ----------------------------------------------------------- */
+body {
+	background-color: $body-bg;	
+}
+/* text color
+/* ----------------------------------------------------------- */
+body,
+.fc button,
+.pagination > li > a, 
+.pagination > li > span,
+.item-title-head .title a,
+.sidebar .widget .review-block .title a,
+.sidebar .widget .comment-block .title a,
+.adults-calculator .quantity-calculator input[disbaled], 
+.children-calculator .quantity-calculator input[disbaled],
+.nav-tabs > li > a,
+.nav-tabs > li > a:hover, 
+.nav-tabs > li > a:focus,
+.nav-tabs > li.active > a, 
+.nav-tabs > li.active > a:hover, 
+.nav-tabs > li.active > a:focus,
+.modal-login-form .forgot-password-text a,
+.modal-login-form .checkbox a,
+.bootstrap-select.btn-group .dropdown-menu a,
+.header-nav .social-icons a,
+.header-nav .crncy-lang-block > li span,
+.header-comp-logo h1,
+.item-list-view .item-user-image,
+.item-title-head .title a,
+.control  {
+	color: $text-color;
+}
+.item-title-head .title a:hover,
+.sidebar .widget .review-block .title a:hover,
+.sidebar .widget .comment-block .title a:hover  {
+	color: rgba($text-color, .50);
+}
+/* buttons colors
+/* ----------------------------------------------------------- */
+.btn-primary {
+	@include button-colors($white,$brand-primary,$brand-primary);
+}
+.btn-secondary {
+	@include button-colors($white,$brand-secondary,$brand-secondary);
+}
+/* main nav colors
+/* ----------------------------------------------------------- */
+.header-nav {
+	background-color: $white;
+	border-bottom: 1px solid $color-grey-lighter;
+}
+.navi > .main-menu > li > a, 
+.account-loggedin, 
+.login-register a {
+	color: $text-color;
+	background-color: $white;
+	&:hover,
+	&:active {
+		color: $color-primary;
+		background-color: $white;
+	}
+}
+.navi > .main-menu > li > a:before {
+	background-color: $color-primary; /* this is the border top on hover */
+}
+.navi,
+.listing-navi {
+	& > .main-menu {
+		& > li {
+			& > a {
+				&:before {
+					background-color: $bg-primary;
+				}
+			}
+		}
+		& > li.active {
+			& > a {
+				color: $color-primary;
+			}
+		}
+	}
+	.homey-megamenu-wrap {
+		.sub-menu {
+			background-color: $white;
+		}
+	}
+}
+/* main nav colors style 2
+/* ----------------------------------------------------------- */
+.header-type-2 .top-inner-header {
+	border-bottom: 1px solid $color-grey-lighter;
+	background-color: $white;
+}
+.header-type-2 .bottom-inner-header {
+	border-bottom: 1px solid $color-grey-lighter;
+	background-color: $white;
+}
+/* main nav colors style 3
+/* ----------------------------------------------------------- */
+.header-type-3 .top-inner-header {
+	border-bottom: 1px solid $color-grey-lighter;
+	background-color: $white;
+}
+.header-type-3 .bottom-inner-header {
+	border-bottom: 1px solid $color-grey-lighter;
+	background-color: $white;
+}
+
+/* transparen header
+/* ----------------------------------------------------------- */
+.transparent-header {
+	.navi > .main-menu > li > a, 
+	.account-loggedin, 
+	.login-register a,
+	.btn-mobile-nav {
+		color: $white;
+		&:hover,
+		&:active {
+			color: $color-primary;
+		}
+	}
+	.navi > .main-menu > li > a:before {
+		background-color: $color-primary; 
+	}
+	.navi,
+	.listing-navi {
+		& > .main-menu {
+			& > li {
+				& > a {
+					&:before {
+						background-color: $bg-primary;
+					}
+				}
+			}
+			& > li.active {
+				& > a {
+					color: $color-primary;
+				}
+			}
+		}
+		.homey-megamenu-wrap {
+			background-color: $white;
+		}
+	}
+}
+
+
+/* main nav dropdown colors
+/* ----------------------------------------------------------- */
+.navi .homey-megamenu-wrap > .sub-menu, 
+.listing-navi .homey-megamenu-wrap > .sub-menu {
+	a {
+		color: $text-color;	
+		background-color: $white;
+		&:hover {
+			color: $color-primary;
+			background-color: $white;
+		}
+	}
+}
+.header-nav .menu-dropdown,
+.header-nav .sub-menu {
+	a {
+		color: $text-color;	
+		background-color: $white;
+		border-bottom: 1px solid $color-grey-lighter;
+		&:hover {
+			color: $color-primary;
+			background-color: $white;
+		}
+	}
+	li.active {
+		& > a {
+			color: $color-primary;
+		}
+	}
+}
+
+/* add new listing button
+/* ----------------------------------------------------------- */
+.btn-add-new-listing {
+	@include button-colors($color-primary,$white,$color-primary);
+	font-size: 14px;
+}
+/* user dashboard menu
+/* ----------------------------------------------------------- */
+.account-loggedin {
+	&:hover {
+		color: $color-primary;
+	}
+	&.active {
+		.account-dropdown {
+			background-color: $white;
+		}
+	}
+}
+.account-dropdown ul {
+	& > li {
+		border-bottom: 1px solid rgba($white,.1);
+		a {
+			color: $text-color;
+			&:hover {
+				background-color: rgba($bg-secondary,.15);
+				color: $text-color;
+			}
+		}
+	}
+	li.active,
+	li:hover {
+		& > a {
+			background-color: rgba($bg-secondary,.15);
+		}
+	}
+	.sub-menu {
+		background-color: rgba($bg-secondary,.15);
+		li {
+			border-bottom: 1px solid rgba($white,.1);
+		}
+		li.active,
+		li:hover {
+			& > a {
+				color: $text-color;
+			}
+		}
+	}
+}
+
+/* left dashboard menu
+/* ----------------------------------------------------------- */
+.board-panel-menu {
+	a {
+		color: $text-color;
+		&:hover {
+			background-color: rgba($bg-secondary,.15);
+			color: $text-color;
+		}
+	}
+}
+.board-panel-item-active {
+	background-color: rgba($bg-secondary,.15);
+	li {
+		a {
+			font-weight: 400;
+		}
+	}
+}
+
+/* dashboard footer colors
+/* ----------------------------------------------------------- */
+.footer-top-wrap {
+	background-color: $footer-bg;
+	color: $white;
+}
+.footer-bottom-wrap,
+.footer-small {
+	background-color: darken($footer-bg,2%);
+	color: $white;
+}
+.footer .social-icons a,
+.footer a,
+.footer .title a {
+	color: $white;
+}
+.footer-copyright {
+	color: $white; 
+}
+/* listing nav colors
+/* ----------------------------------------------------------- */
+.listing-nav {
+	background-color: rgba($color-grey, .85); 
+}
+.listing-navi > .main-menu > li > a {
+	color: $white;
+	background-color: transparent;
+	&:focus,
+	&:hover,
+	&:active {
+		color: $white;
+		background-color: transparent;
+	}
+}
+
+/* top bar colors
+/* ----------------------------------------------------------- */
+.header-top-bar {
+	background-color: $bg-grey;
+}
+.social-icons a {
+	color: $white;
+}
+.top-contact-address {
+	li {
+		color: $white;
+	}
+	a {
+		color: $white;
+		&:hover {
+			color: rgba($white,.8);
+		}
+	}
+}
+/* main search
+/* ----------------------------------------------------------- */
+.main-search {
+	background-color: $white;
+}
+/* parallax banner colors
+/* ----------------------------------------------------------- */
+.banner-title,
+.banner-subtitle {
+	color: $white;
+}
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+/* typography
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */ 
+
+/* body
+/* ----------------------------------------------------------- */
+body, address, li, dt, dd, .control {
+	@include typography(15px, 32px, 400, none, .5px);
+	font-family: $font-primary;
+	@include respond-to(sm-max) {
+		@include typography(14px, 22px, 400, none, .5px);
+	}
+}
+/* headings
+/* ----------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-primary, sans-serif;
+}
+h1 {
+	@include typography(28px, 38px, 700, none, normal);
+	@include respond-to(sm-max) {
+		@include typography(22px, 30px, 700, none, normal);
+	}
+}
+h2 {
+	@include typography(20px, 30px, 700, none, normal);
+	@include respond-to(sm-max) {
+		@include typography(16px, 24px, 700, none, normal);
+	}
+}
+h3 {
+	@include typography(18px, 30px, 700, none, normal);
+	@include respond-to(sm-max) {
+		@include typography(14px, 22px, 700, none, normal);
+	}
+}
+h4 {
+	@include typography(16px, 24px, 700, none, normal);
+	@include respond-to(sm-max) {
+		@include typography(12px, 20px, 700, none, normal);
+	}
+}
+h5 {
+	@include typography(14px, 22px, 700, none, normal);
+	@include respond-to(sm-max) {
+		@include typography(12px, 20px, 700, none, normal);
+	}
+}
+h5 {
+	@include typography(14px, 22px, 700, none, normal);
+	@include respond-to(sm-max) {
+		@include typography(12px, 20px, 700, none, normal);
+	}
+}
+
+/* listing nav typography
+/* ----------------------------------------------------------- */
+.listing-navi > .main-menu > li > a {
+	@include typography(12px, 60px, 500, none, normal);
+}
+/* main nav typography
+/* ----------------------------------------------------------- */
+.navi > .main-menu > li > a,
+.account-loggedin,
+.login-register a {
+	@include typography(14px, 80px, 500, none, normal);
+}
+/* main nav dropdown typography
+/* ----------------------------------------------------------- */
+.menu-dropdown,
+.navi .homey-megamenu-wrap > .sub-menu, 
+.listing-navi .homey-megamenu-wrap > .sub-menu  {
+	a {
+		@include typography(14px, 24px, 400, none, normal);
+	}
+}
+/* account drop down menu typography
+/* ----------------------------------------------------------- */
+.account-dropdown ul > li a {
+	@include typography(14px, 24px, 500, none, normal);
+}
+/* top bar typography
+/* ----------------------------------------------------------- */
+.top-contact-address li, .crncy-lang-block > li {
+	font-size: 14px;
+	line-height: 47px;
+	font-weight: 400;
+}
+/* parallax banner typography
+/* ----------------------------------------------------------- */
+.banner-title {
+	@include typography(32px, 42px, inherit, none, normal);
+}
+.banner-subtitle {
+	@include typography(18px, 30px, inherit, none, normal);
+}
+/* datepiker no need to add in styling option
+/* ----------------------------------------------------------- */
+.daterangepicker td.start-date,
+.daterangepicker td.end-date,
+.daterangepicker td.active.end-date {
+	color: $white;
+}
+
+// .mixed-search-side-banner .nav-tabs > li.active > a {
+// 	background-color: $color-primary;
+// 	border: 1px solid $color-primary;
+// 	color: $white;
+// }

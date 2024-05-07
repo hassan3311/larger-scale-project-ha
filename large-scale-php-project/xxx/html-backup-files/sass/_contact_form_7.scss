@@ -1,0 +1,31 @@
+/* contact from 7
+/* ------------------------------------------------------------------------ */
+.wpcf7-form-control {
+	@extend .form-control;
+}
+.wpcf7-submit,
+.gform_wrapper .button, .gform_button {
+	@extend .btn;
+}
+.wpcf7 {
+	p {
+		margin-bottom: 0;
+	}
+	label {
+		@extend .display-block;
+	}
+}
+.wpcf7-textarea {
+	min-height: 100px;
+}
+div.wpcf7-response-output {
+	@extend .alert;
+	@extend .alert-warning;
+	margin: 0;
+	padding: 15px 20px;
+	border: 1px solid #F5A623;
+	&.wpcf7-mail-sent-ok {
+		@extend .alert;
+		@extend .alert-success;
+	}
+}

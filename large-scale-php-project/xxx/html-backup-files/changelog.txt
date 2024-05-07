@@ -1,0 +1,37 @@
+==== Aug. 28th ==== 
+
+[CHANGE] /homey-html/inc/listing/item-grid.php:
+   line 20:             	<div class="item-title-head table-block">
+   removed class "table-block"
+
+[CHANGE] homey-html/inc/header-slider-item.php:
+    line 6:                 <div class="item-title-head table-block">
+    removed class "table-block"
+
+[CHANGE] homey-html/inc/header-slider-item.php:
+    line 6:                 <div class="item-title-head table-block">
+    removed class "table-block"
+
+[CHANGE] homey-html/inc/google-maps.php:
+  	line 445:         		'<div class="item-title-head table-block">'+    
+  	removed class "table-block"
+
+[CHANGE] homey-html/inc/widgets/widget-latest-posts.php:
+   line 16:                     <div class="item-title-head table-block">
+   line 36:                     <div class="item-title-head table-block">
+   line 56:                     <div class="item-title-head table-block">
+   removed class "table-block"
+
+[CHANGE] homey-html/inc/widgets/widget-properties.php:
+   line 20:                     <div class="item-title-head table-block">
+   line 54:                     <div class="item-title-head table-block">
+   line 88:                     <div class="item-title-head table-block">
+
+[CHANGE] homey-html/inc/widgets/widget-reviews.php
+   18:                             <div class="message-date">
+   40:                             <div class="message-date">
+   Added class "message-date"
+
+
+==== Sep. 6th ==== 
+Removed compare properties from all listings files and added to footer.php and footer-half-map.php

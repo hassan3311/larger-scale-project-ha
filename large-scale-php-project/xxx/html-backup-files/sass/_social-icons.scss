@@ -1,0 +1,107 @@
+/* social icons
+/* ------------------------------------------------------------------------ */
+.btn-facebook {
+    @include social_media_colors($facebook);
+//    @include social_media_bg($facebook);
+}
+.btn-twitter {
+    @include social_media_colors($twitter);
+}
+.btn-pinterest {
+    @include social_media_colors($pinterest);
+}
+.btn-instagram {
+    @include social_media_colors($instagram);
+}
+.btn-google-plus {
+    @include social_media_colors($google-plus);
+}
+.btn-linkedin {
+    @include social_media_colors($linkedin);
+}
+.btn-youtube {
+    @include social_media_colors($youtube);
+}
+.btn-dribbble {
+    @include social_media_colors($dribbble);
+}
+.btn-foursquare {
+    @include social_media_colors($foursquare);
+}
+.btn-flickr {
+    @include social_media_colors($flickr);
+}
+.btn-vimeo {
+    @include social_media_colors($vimeo);
+}
+.btn-tumblr {
+    @include social_media_colors($tumblr);
+}
+.btn-rss {
+    @include social_media_colors($rss);
+}
+.btn-email {
+    @include social_media_colors($email);
+}
+.btn-apple {
+    @include social_media_colors($apple);
+}
+.btn-android {
+    @include social_media_colors($android);
+}
+.btn-windows {
+    @include social_media_colors($windws);
+}
+.detail-property-page-v5 .sidebar-booking-module-footer .social-icons,
+.detail-property-page-v6 .sidebar-booking-module-footer .social-icons {
+    @include social_media_bg('.btn-bg-facebook', $facebook);
+    @include social_media_bg('.btn-bg-twitter', $twitter);
+    @include social_media_bg('.btn-bg-pinterest', $pinterest);
+    @include social_media_bg('.btn-bg-instagram', $instagram);
+    @include social_media_bg('.btn-bg-google-plus', $google-plus);
+    @include social_media_bg('.btn-bg-linkedin', $linkedin);
+    @include social_media_bg('.btn-bg-youtube', $youtube);
+    @include social_media_bg('.btn-bg-dribbble', $dribbble);
+    @include social_media_bg('.btn-bg-foursquare', $foursquare);
+    @include social_media_bg('.btn-bg-flickr', $flickr);
+    @include social_media_bg('.btn-bg-vimeo', $vimeo);
+    @include social_media_bg('.btn-bg-tumblr', $tumblr);
+    @include social_media_bg('.btn-bg-rss', $rss);
+    @include social_media_bg('.btn-bg-email', $email);
+    @include social_media_bg('.btn-bg-apple', $apple);
+    @include social_media_bg('.btn-bg-android', $android);
+    @include social_media_bg('.btn-bg-windows', $windws);
+}
+
+.social-icons {
+    a {
+        @extend .display-inline-block;
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+        line-height: 45px;
+        text-align: center;
+        //margin-left: 8px;
+        &:first-child {
+            @extend .margin-0;
+        }
+        @include respond-to(sm-max) {
+            width: 40px;
+        }
+        // @include respond-to(xs-max) {
+        //     width: 28px;
+        // }
+    }
+    i {
+        @extend .relative;
+        z-index: 1;
+    }
+}
+.social-round {
+    a {
+        border-radius: 50%;
+        &:before {
+            border-radius: 50%;
+        }
+    }
+}

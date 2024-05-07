@@ -1,0 +1,38 @@
+/* breadcrumbs
+/* ------------------------------------------------------------------------ */
+.breadcrumb {
+    //@extend .margin-0;
+    @extend .padding-0;
+    @extend .background-color-transparent;
+    margin-bottom: 0;
+    li {
+        font-size: 14px;
+        &:before {
+            @extend .display-none;
+        } 
+        &:after {
+            font-family: $font-awesome;
+            content: "\f105";
+            padding-top: 0;
+            padding-#{$end-direction}: 5px;
+            padding-bottom: 0;
+            padding-#{$start-direction}: 10px;
+
+            font-size: 75%;
+            @extend .display-inline-block;
+            @extend .v-middle;
+        }
+        &:last-child {
+            &:after {
+                content: "";
+                @extend .padding-0;
+            }
+        }
+        & + li {
+            &:before {
+                content: "";
+                @extend .padding-0;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+html[dir="rtl"] {
+	/* header
+	/* ----------------------------------------------------------- */
+	.header-comp-right {
+		padding-left: 0;
+		padding-right: 20px;
+	}
+	.btn-add-new-listing {
+		padding: 0 15px;
+		margin-left: 0;
+		margin-right: 5px;
+	}
+}

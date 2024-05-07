@@ -1,0 +1,122 @@
+.compare-property-active {
+	overflow-x: hidden;
+	//position: relative;
+	#{$start-direction}: 0;
+}
+.compare-property-active-push-toleft {
+	#{$start-direction}: -240px;
+}
+.compare-property-panel {
+	background: $white;
+	position: fixed;
+	padding: 20px 15px 20px 20px;
+	border-#{$start-direction}: 1px solid $borders-default-color;
+	.title {
+		margin-bottom: 20px;
+	}
+}
+.compare-property-panel-vertical {
+	width: 300px;
+	height: 100%;
+	top: 0;
+	z-index: 1000;
+}
+.compare-property-panel-right {
+	#{$end-direction}: -300px;
+	&.compare-property-panel-open {
+		#{$end-direction}: 0px;
+	}
+}
+.compare-property-panel,
+.compare-property-active {
+	transition: all 0.3s ease;
+}
+.compare-tool {
+	background-color: $white;
+	margin-bottom: 30px;
+	padding: 15px 20px;
+	.title {
+		font-size: 14px;
+		margin-bottom: 15px;
+	}
+}
+.compare-item {
+	@extend .relative;
+	@extend .float-left;
+	width: calc(50% - 5px);
+	margin-#{$end-direction}: 5px;
+	margin-bottom: 10px;
+	.remove-icon {
+		color: $white;
+		background: rgba($black, 1);
+		border-radius: 2px;
+		display: block;
+		width: 30px;
+		line-height: 30px;
+		@extend .absolute;
+		bottom: 10px;
+		#{$end-direction}: 10px;
+		text-align: center;
+		z-index: 1;
+	}
+}
+.empty-compare-item {
+	border: 3px dotted $borders-default-color;
+	background: rgba($borders-default-color, .2);
+	height: 84px;
+}
+.compare-table {
+	background-color: $white; 
+	@include respond-to(sm-max) {
+		overflow-x: scroll;
+	}
+	th,
+	td {
+		padding: 10px !important;
+		width: 20%;
+		vertical-align: middle !important;
+		&:first-child {
+			text-align: right;
+			padding-top: 10px;
+			padding-#{$end-direction}: 20px;
+			padding-bottom: 10px;
+			padding-#{$start-direction}: 10px;
+		}
+	}
+	.table-hover > tbody > tr:hover {
+		color: $white
+	}
+}
+.compare-property-label {
+	@extend .absolute;
+	background-color: $brand-grey;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	top: 50%;
+	#{$start-direction}: -40px;
+	text-align: center;
+	color: $white;
+	border-top-#{$start-direction}-radius: 4px;
+	border-top-#{$end-direction}-radius: 0;
+	border-bottom-#{$end-direction}-radius: 0;
+	border-bottom-#{$start-direction}-radius: 4px;
+	border: none;
+	&:hover,
+	&:active {
+		background-color: darken($brand-grey, 10%);
+	}
+	span {
+		@extend .display-block;
+		@extend .absolute;
+		background-color: $brand-success;
+		font-size: 11px;
+		font-weight: 700;
+		width: 16px;
+		height: 16px;
+		line-height: 16px;
+		border-radius: 50%;
+		top: -5px;
+		#{$start-direction}: -5px;
+	}
+}

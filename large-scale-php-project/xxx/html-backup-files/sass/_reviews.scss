@@ -1,0 +1,63 @@
+/* review
+/* ------------------------------------------------------------------------ */
+.reviews-section {
+	margin: 30px 0;
+	@include respond-to(sm-max) {
+		padding: 0 20px;
+	}
+	h2 {
+		margin: 5px 0 0;
+	}
+	.alert {
+		color: $text-color;
+	}
+	i {
+		margin: 0 5px 0 10px;
+	}
+	.message-date {
+		margin: 3px 0 0 -10px;	
+	}
+}
+.review-block {
+	border-bottom: 1px dotted $borders-default-color;
+	padding: 40px 0;
+	font-size: 15px;
+    line-height: 25px;
+	&:last-of-type {
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+	.label {
+		top: -1px;
+		#{$start-direction}: 5px;
+	}
+	.rating {
+		margin-#{$start-direction}: 6px;
+		i {
+			margin-#{$start-direction}: 2px;
+			margin-#{$end-direction}: 2px;
+			color: $brand-grey-light;
+		}
+		.homey-icon-rating-star-full {
+			color: $rating-color;
+		}
+	}
+}
+/* review host profile
+/* ------------------------------------------------------------------------ */
+.host-rating-section {
+	.reviews-section {
+		@extend .margin-0;
+		ul {
+			@extend .margin-0;
+		}
+	}
+	.review-block {
+		padding: 0 0 40px 0;
+		margin-bottom: 60px;
+		&:last-of-type {
+			@extend .margin-0;
+			@extend .padding-0;
+		}
+	}
+}

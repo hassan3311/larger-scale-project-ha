@@ -1,0 +1,257 @@
+/* banner dismentions
+/* ----------------------------------------------------------- */
+.top-banner-wrap {
+	overflow: visible;
+	@extend .relative;
+	&.property-slider-wrap {
+		@include respond-to(sm-max) {
+			height: auto;
+		}
+	}
+	&.top-banner-sr,
+	&.half-search {
+		height: auto !important;
+	}
+}
+.header-slider-item,
+.property-slider-wrap {
+	@extend .relative;
+	height: 600px;
+	@include respond-to(xs-max) {
+		height: 420px;
+	}
+}
+.half-header-slider-item {
+	@extend .relative;
+	height: 554px;
+}
+
+
+/* parallax banner
+/* ----------------------------------------------------------- */
+.banner-inner {
+	@extend .full-width;
+	@extend .full-height;
+	&:before {
+		@extend .absolute;
+		@extend .full-width;
+		@extend .full-height;
+		content: " ";
+		background-color: $black;
+		opacity: 0.35;
+	}
+}
+.banner-caption {
+	@extend .absolute;
+	width: 1020px;
+	z-index: 5;
+	top: 44%;
+	#{$start-direction}: 50%;
+	text-align: center;
+	transform: translate(-50%,-44%);
+	@include respond-to(lg-max) {
+		max-width: 840px;
+	}
+	@include respond-to(md-max) {
+		max-width: 620px;
+	}
+	@include respond-to(sm-max) {
+		max-width: 480px;
+	}
+	@include respond-to(xs-max) {
+		max-width: 320px;
+	}
+}
+.banner-caption-side-search {
+	.side-search-wrap {
+		@extend .absolute;
+		text-align: #{$start-direction};
+		max-width: 480px;
+		background-color: $white;
+		padding: 30px;
+		border-radius: 6px;
+		#{$start-direction}: 0;
+		text-align: #{$start-direction};
+		transform: translate(0,-50%);
+		top: 50%;
+		@include respond-to(sm-max) {
+			max-width: 480px;
+			margin: 0 20px;
+		}
+		.search-destination {
+			@include respond-to(sm-max) {
+				min-width: auto;
+			}	
+		}
+	}
+}
+.banner-inner {
+	@extend .full-width;
+	@extend .full-height;
+}
+/* video banner
+/* ----------------------------------------------------------- */
+.video-background {
+	@extend .full-width;
+	@extend .full-height;
+	&:before {
+		@extend .absolute;
+		@extend .full-width;
+		@extend .full-height;
+		content: " ";
+		background-color: $black;
+		opacity: .35;
+	}
+}
+/* slider banner
+/* ----------------------------------------------------------- */
+.header-slider {
+	.slick-prev, 
+	.slick-next {
+		margin: 0 30px;
+	}
+}
+.header-slider-item {
+	.item-wrap {
+		@extend .absolute;
+		float: none;
+		width: 600px;
+		top: 50%;
+		#{$start-direction}: 35%;
+		transform: translate(-35%,-50%);
+		@include respond-to(md-max) {
+			width: 480px;
+		}
+		@include respond-to(xs-max) {
+			width: 320px;
+		}
+	}
+	.item-title-head {
+		@extend .display-block;
+		.title a {
+			width: calc(100% - 120px);
+			@include respond-to(xs-max) {
+				width: 100%;
+			}
+		}
+	}
+	.item-body {
+		width: auto;
+		padding: 25px;
+		height: 185px;
+		@include respond-to(sm-max) {
+			height: 175px;
+		}
+		@include respond-to(xs-max) {
+			padding: 55px 25px 20px;
+			height: 225px;
+		}	
+	}
+	.item-footer {
+		margin-top: 20px;
+	}
+	.item-user-image {
+		bottom: 20px;
+	}
+	.item-media-price,
+	.item-price {
+		color: inherit;
+		padding: 0;
+	}
+	.property-item .item-amenities .item-label {
+		@extend .display-none;		
+	}
+	.item-media-price {
+		top: 25px;
+		#{$end-direction}: 25px;
+		#{$start-direction}: auto;
+		width: auto !important;
+		height: auto;
+		@include respond-to(xs-max) {
+			height: 30px;
+			#{$end-direction}: auto;
+			#{$start-direction}: 25px;
+		}
+	}
+	.banner-link {
+		@extend .absolute;
+		@extend .full-width;
+		@extend .full-height;
+		@extend .display-block;
+		z-index: 1;
+	}
+	.item-price sup {
+		@include respond-to(xs-max) {
+			top: -5px;
+		}
+	}
+	.item-amenities {
+		.item-label {
+			@include respond-to(xs-max) {
+				display: none;
+			}
+		}
+	}
+}
+/* slider banner - animation
+/* ----------------------------------------------------------- */
+.slick-slide {
+	.header-slider-item {
+		opacity: 0;
+		transition-delay: .5s;
+		@extend %animation-2s;
+	}
+	&.slick-active {
+		.header-slider-item {
+			opacity: 1;
+			@extend %animation-2s;
+			transition-delay: .5s;
+		}
+	}
+	.item-amenities .item-type {
+		@extend .display-inline;
+	}
+}
+/* half search
+/* ----------------------------------------------------------- */
+.half-search {
+	padding: 60px 0;
+	background-color: $white;
+	height: 684px;
+}
+.banner-caption-side-search {
+	@extend .relative;
+	z-index: 1;
+	height: 554px;
+	@include respond-to(md-max) {
+		max-width: 680px;
+		// transform: translate(-50%, -50%);
+		// top: 50%;
+		// left: 50%;
+	}
+	@include respond-to(sm-max) {
+		height: auto;
+		max-width: 100%;
+	}
+	.half-search-wrap {
+		@extend .absolute;
+		padding: 0 50px 0 0;
+		top: 50%;
+		transform: translate(0, -50%);
+		@include respond-to(sm-max) {
+			position: relative;
+			padding: 0;
+			top: auto;
+			transform: none;
+		}
+	}
+}
+.half-header-image {
+	background-size: cover;
+	background-position: 50%;
+	height: 554px;
+	@include respond-to(sm-max) {
+		margin-top: 30px;
+		height: 300px;
+	}
+}

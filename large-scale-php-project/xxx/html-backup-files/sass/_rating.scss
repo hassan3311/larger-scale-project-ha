@@ -1,0 +1,19 @@
+/* rating
+/* ------------------------------------------------------------------------ */
+.rating {
+    font-size: 13px;
+    i {
+       font-size: 12px; 
+       margin-#{$end-direction}: 5px;
+    }
+    .label {
+        text-transform: uppercase;
+    }
+}
+.star-text-right {
+    font-weight: 600;
+    a {
+        color: $text-color;
+        text-decoration: underline;
+    }
+}

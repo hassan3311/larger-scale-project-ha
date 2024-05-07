@@ -1,0 +1,234 @@
+<div class="table-row msg-unread">
+    <div class="table-col clearfix">
+        <div class="media user-list-media">
+            <div class="media-left">
+                <span class="media-signal">
+                    <img src="img/guest-avatar-100x100.png" class="img-circle" alt="Image" width="40" height="40">
+                </span>
+            </div>
+            <div class="media-body">
+                <div class="table-col-content-top">
+                    <strong>Reservation #00001</strong> <span class="label label-secondary">NEW</span><br> 
+                    <time datetime="2017-05-15T19:00">May 15, 2017</time>
+                </div>
+                <div class="table-col-content-bottom">
+                    <strong>Apartment With Oceanview</strong><br> 
+                    <address>9701 W Broadview Dr, Bay Harbor Islands, FL 31175</address>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="table-col clearfix">
+        <div class="table-col-content-top">
+            <strong>Check In:</strong><br> 
+            <time datetime="2017-05-15T19:00">02/22/2018</time>
+        </div>
+        <div class="table-col-content-bottom">
+            <strong>Check Out:</strong><br> 
+            <time datetime="2017-05-15T19:00">02/28/2018</time>
+        </div>
+    </div>
+    <div class="table-col clearfix">
+        <div class="table-col-content-top">
+            <strong>Guests:</strong><br> 
+            3
+        </div>
+        <div class="table-col-content-bottom">
+            <strong>Subtotal:</strong><br> 
+            $225
+        </div>
+    </div>
+    <div class="table-col clearfix">
+        <div class="custom-actions">
+            <button class="btn btn-success" onclick="window.location.href='dashboard-reservation-details-host.php'">Confirm Availability</button>
+        </div>
+    </div>
+</div><!-- .table-row -->
+
+<div class="table-row">
+    <div class="table-col clearfix">
+        <div class="media user-list-media">
+            <div class="media-left">
+                <span class="media-signal">
+                    <img src="img/guest-avatar-100x100.png" class="img-circle" alt="Image" width="40" height="40">
+                </span>
+            </div>
+            <div class="media-body">
+                <div class="table-col-content-top">
+                    <strong>Reservation #00001</strong> <span class="label label-secondary">AVAILABILE</span><br> 
+                    <time datetime="2017-05-15T19:00">May 15, 2017</time>
+                </div>
+                <div class="table-col-content-bottom">
+                    <strong>Apartment With Oceanview</strong><br> 
+                    <address>9701 W Broadview Dr, Bay Harbor Islands, FL 31175</address>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="table-col clearfix">
+        <div class="table-col-content-top">
+            <strong>Check In:</strong><br> 
+            <time datetime="2017-05-15T19:00">02/22/2018</time>
+        </div>
+        <div class="table-col-content-bottom">
+            <strong>Check Out:</strong><br> 
+            <time datetime="2017-05-15T19:00">02/28/2018</time>
+        </div>
+    </div>
+    <div class="table-col clearfix">
+        <div class="table-col-content-top">
+            <strong>Guests:</strong><br> 
+            3
+        </div>
+        <div class="table-col-content-bottom">
+            <strong>Subtotal:</strong><br> 
+            $225
+        </div>
+    </div>
+    <div class="table-col clearfix">
+        <div class="custom-actions">
+            <button class="btn btn-secondary" onclick="window.location.href='dashboard-reservation-available-host.php'">Details</button>
+        </div>
+    </div>
+</div><!-- .table-row -->
+
+<div class="table-row">
+    <div class="table-col clearfix">
+        <div class="media user-list-media">
+            <div class="media-left">
+                <span class="media-signal">
+                    <img src="img/guest-avatar-100x100.png" class="img-circle" alt="Image" width="40" height="40">
+                </span>
+            </div>
+            <div class="media-body">
+                <div class="table-col-content-top">
+                    <strong>Reservation #00001</strong> <span class="label label-success">BOOKED</span><br> 
+                    <time datetime="2017-05-15T19:00">May 15, 2017</time>
+                </div>
+                <div class="table-col-content-bottom">
+                    <strong>Apartment With Oceanview</strong><br> 
+                    <address>9701 W Broadview Dr, Bay Harbor Islands, FL 31175</address>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="table-col clearfix">
+        <div class="table-col-content-top">
+            <strong>Check In:</strong><br> 
+            <time datetime="2017-05-15T19:00">02/22/2018</time>
+        </div>
+        <div class="table-col-content-bottom">
+            <strong>Check Out:</strong><br> 
+            <time datetime="2017-05-15T19:00">02/28/2018</time>
+        </div>
+    </div>
+    <div class="table-col clearfix">
+        <div class="table-col-content-top">
+            <strong>Guests:</strong><br> 
+            3
+        </div>
+        <div class="table-col-content-bottom">
+            <strong>Subtotal:</strong><br> 
+            $225
+        </div>
+    </div>
+    <div class="table-col clearfix">
+        <div class="custom-actions">
+            <button class="btn btn-secondary" onclick="window.location.href='dashboard-reservation-booked-host.php'">Details</button>
+        </div>
+    </div>
+</div><!-- .table-row -->
+
+<div class="table-row">
+    <div class="table-col clearfix">
+        <div class="media user-list-media">
+            <div class="media-left">
+                <span class="media-signal">
+                    <img src="img/guest-avatar-100x100.png" class="img-circle" alt="Image" width="40" height="40">
+                </span>
+            </div>
+            <div class="media-body">
+                <div class="table-col-content-top">
+                    <strong>Reservation #00001</strong> <span class="label label-danger">DECLINED</span><br> 
+                    <time datetime="2017-05-15T19:00">May 15, 2017</time>
+                </div>
+                <div class="table-col-content-bottom">
+                    <strong>Apartment With Oceanview</strong><br> 
+                    <address>9701 W Broadview Dr, Bay Harbor Islands, FL 31175</address>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="table-col clearfix">
+        <div class="table-col-content-top">
+            <strong>Check In:</strong><br> 
+            <time datetime="2017-05-15T19:00">02/22/2018</time>
+        </div>
+        <div class="table-col-content-bottom">
+            <strong>Check Out:</strong><br> 
+            <time datetime="2017-05-15T19:00">02/28/2018</time>
+        </div>
+    </div>
+    <div class="table-col clearfix">
+        <div class="table-col-content-top">
+            <strong>Guests:</strong><br> 
+            3
+        </div>
+        <div class="table-col-content-bottom">
+            <strong>Subtotal:</strong><br> 
+            $225
+        </div>
+    </div>
+    <div class="table-col clearfix">
+        <div class="custom-actions">
+            <button class="btn btn-secondary">Details</button>
+        </div>
+    </div>
+</div><!-- .table-row -->
+
+<div class="table-row">
+    <div class="table-col clearfix">
+        <div class="media user-list-media">
+            <div class="media-left">
+                <span class="media-signal">
+                    <img src="img/guest-avatar-100x100.png" class="img-circle" alt="Image" width="40" height="40">
+                </span>
+            </div>
+            <div class="media-body">
+                <div class="table-col-content-top">
+                    <strong>Reservation #00001</strong> <span class="label label-grey">CANCELLED</span><br> 
+                    <time datetime="2017-05-15T19:00">May 15, 2017</time>
+                </div>
+                <div class="table-col-content-bottom">
+                    <strong>Apartment With Oceanview</strong><br> 
+                    <address>9701 W Broadview Dr, Bay Harbor Islands, FL 31175</address>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="table-col clearfix">
+        <div class="table-col-content-top">
+            <strong>Check In:</strong><br> 
+            <time datetime="2017-05-15T19:00">02/22/2018</time>
+        </div>
+        <div class="table-col-content-bottom">
+            <strong>Check Out:</strong><br> 
+            <time datetime="2017-05-15T19:00">02/28/2018</time>
+        </div>
+    </div>
+    <div class="table-col clearfix">
+        <div class="table-col-content-top">
+            <strong>Guests:</strong><br> 
+            3
+        </div>
+        <div class="table-col-content-bottom">
+            <strong>Subtotal:</strong><br> 
+            $225
+        </div>
+    </div>
+    <div class="table-col clearfix">
+        <div class="custom-actions">
+            <button class="btn btn-secondary" onclick="window.location.href='dashboard-reservation-cancelled-host.php'">Details</button>
+        </div>
+    </div>
+</div><!-- .table-row -->

@@ -1,0 +1,8 @@
+.experience-item {
+	.item-tools .dropdown-menu > li:last-child a {
+		border-top-#{$start-direction}-radius: 4px;
+		border-top-#{$end-direction}-radius: 0;
+		border-bottom-#{$end-direction}-radius: 4px;
+		border-bottom-#{$start-direction}-radius: 4px;
+	}
+}

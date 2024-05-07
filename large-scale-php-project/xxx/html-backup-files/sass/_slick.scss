@@ -1,0 +1,80 @@
+/* slick slider
+/* ------------------------------------------------------------------------ */
+.listing-slider {
+	margin-#{$start-direction}: -1px;
+	margin-#{$end-direction}: -1px;
+	max-height: 501px;
+	overflow: hidden;
+	&.listing-slider-full-width {
+		max-height: 761px;
+	}
+	.slick-active {
+		img {
+			opacity: 1;
+		}	
+	}
+}
+.listing-slider-nav {
+	max-height: 81px;
+	overflow: hidden;
+	.slick-slide {
+		background: $black;
+		&:focus,
+		&:active {
+			outline: none;
+		}
+		&:hover {
+			cursor: pointer;
+		}
+		img {
+			opacity: .75;
+		}
+		@include respond-to(xs-max) {
+			width: 60px;
+			height: auto;
+		}
+	}
+	.slick-current {
+		img {
+			opacity: 1;
+		}	
+	}
+}
+.slick-slide {
+	margin: 0 1px 0 0;
+}
+.slick-prev, 
+.slick-next {
+	height: 40px;
+	width: 40px;
+	z-index: 1;
+	text-align: center;
+	border-radius: 3px;
+	font-weight: 700;
+	&:before {
+		display: inline-block;
+		font-size: 16px;
+	}
+	@include respond-to(sm-max) {
+		display: none !important;
+	}
+}
+.slick-prev {
+	#{$start-direction}: 0;
+	&:before {
+		content:"\f053";
+		font-family: Fontawesome;
+	}
+}
+.slick-next {
+	#{$end-direction}: 0;
+	&:before {
+		content:"\f054";
+		font-family: Fontawesome;
+	}
+}
+.top-banner-wrap-fullscreen {
+	.header-slider-item {
+		background-size: cover;
+	}
+}

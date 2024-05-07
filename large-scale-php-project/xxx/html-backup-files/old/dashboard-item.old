@@ -1,0 +1,68 @@
+<div class="item-wrap">
+    <div class="media property-item">
+        <div class="media-left">
+            <div class="item-media item-media-thumb">
+                <span class="label-wrap top-left">
+                    <span class="label label-success">Featured</span>
+                </span>
+                <a href="#" class="hover-effect"><img class="img-responsive" src="img/image-450x300.png" width="450" height="300" alt="Thumb"></a>
+                <div class="item-media-price grid-item-hidden">
+                    <span class="item-price"><sup>$</sup>375<sub>/night</sub></span>
+                </div>
+                <div class="item-user-image">
+                    <img class="img-responsive img-circle" src="img/host-avatar-36x36.png" alt="user-image" width="36" height="36">
+                    <span class="item-user-info">Hosted by<br>
+                    Patricia Wayne</span>
+                </div>
+            </div>
+        </div>
+        <div class="media-body item-body">
+            <div class="item-title-head">
+                <div class="title-head-left">
+                    <h3 class="title"><a href="#"><span class="label label-primary">NEW</span> Apartment For Rent</a></h3>
+                    <address class="item-address">Miami Beach, FL</address>
+                </div>
+                <div class="title-head-right list-item-hidden">
+                    <div class="item-media-price">
+                        <span class="item-price"><sup>$</sup>375<sub>/night</sub></span>
+                    </div>
+                </div>
+            </div>
+            <ul class="item-amenities">
+                <li><i class="homey-icon homey-icon-hotel-double-bed"></i><span id="total-beds">0</span> <span class="item-label">Bedrooms</span></li>
+                <li><i class="homey-icon homey-icon-bathroom-shower-1"></i><span id="total-baths">0</span> <span class="item-label">Baths</span></li>
+                <li><i class="homey-icon homey-icon-multiple-man-woman-2"></i><span id="total-guests">0</span> <span class="item-label">Guests</span></li>
+                <li class="item-type">Property Type</li>
+            </ul>
+            <div class="item-footer">
+                <div class="footer-left">
+                    <div class="stars">
+                        <div class="rating">
+                            <span class="homey-icon homey-icon-rating-star"></span>
+                            <span class="homey-icon homey-icon-rating-star"></span>
+                            <span class="homey-icon homey-icon-rating-half-star"></span>
+                            <span class="homey-icon homey-icon-rating-half-star"></span>
+                            <span class="homey-icon homey-icon-rating-half-star"></span>
+                            <span class="star-text-right">15 Ratings</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <div class="item-date"><i class="homey-icon homey-icon-calendar-3"></i> 0 Days ago </div>
+                    <div class="item-tools">
+                        <div class="btn-group dropup">
+                          <button class="btn-item-tools dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="homey-icon homey-icon-navigation-menu-vertical" aria-hidden="true"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="show-compare-panel" href="#">Compare</a></li>
+                            <li><a href="#">Add to favorite</a></li>
+                        </ul>
+                    </div>
+                    <!-- <a href="#"></a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div><!-- .item-wrap -->

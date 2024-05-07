@@ -1,0 +1,154 @@
+/* sizes
+/* ------------------------------------------------------------------------ */
+.full-width {
+    width: 100%
+}
+.full-height {
+    height: 100%;
+}
+.max-full-width {
+    max-width: 100%;
+}
+.max-full-height {
+    height-width: 100%;
+}
+/* positions
+/* ------------------------------------------------------------------------ */
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+.static {
+    position: static;
+}
+.fixed {
+    position: fixed;
+}
+/* displays
+/* ------------------------------------------------------------------------ */
+.display-block {
+    display: block;
+}
+.display-inline-block {
+    display: inline-block;
+}
+.display-inline {
+    display: inline;
+}
+.display-table {
+    display: table;
+}
+.display-table-row {
+    display: table-row;
+}
+.display-table-cell {
+    display: table-cell;
+}
+.display-flex {
+    display: flex;
+}
+.display-none {
+    display: none;
+}
+/* backgrounds
+/* ------------------------------------------------------------------------ */
+.background-color-transparent {
+    background-color: transparent;
+}
+/* borders
+/* ------------------------------------------------------------------------ */
+.border-0 {
+    border: 0;
+}
+.border-none {
+    border: none;
+}
+.border-top {
+    border-top: 1px dotted $brand-grey-lighter;
+}
+
+/* margins
+/* ------------------------------------------------------------------------ */
+.margin-0 {
+    margin: 0;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+.mt-20 {
+    margin-top: 20px;
+}
+.mt-30 {
+    margin-top: 30px;
+}
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+.mb-10 {
+    margin-bottom: 10px !important;
+}
+.mb-20 {
+    margin-bottom: 20px !important;
+}
+.mb-30 {
+    margin-bottom: 30px !important;
+}
+/* paddings
+/* ------------------------------------------------------------------------ */
+.padding-0 {
+    padding: 0;
+}
+.pb-0 {
+    padding-bottom: 0 !important;
+}
+/* floats
+/* ------------------------------------------------------------------------ */
+.float-left {
+    float: #{$start-direction};
+}
+.float-right {
+    float: #{$end-direction};
+}
+.float-none {
+    float: none;
+}
+/* aligns
+/* ------------------------------------------------------------------------ */
+.v-middle {
+    vertical-align: middle !important;
+}
+.v-top {
+    vertical-align: top !important;
+}
+.v-bottom {
+    vertical-align: bottom !important;
+}
+/* position
+/* ------------------------------------------------------------------------ */
+.left-0 {
+    #{$start-direction}: 0;
+}
+.right-0 {
+    #{$end-direction}: 0;
+}
+.top-0 {
+    top: 0;
+}
+.bottom-0 {
+    bottom: 0;
+}
+/* text colors
+/* ------------------------------------------------------------------------ */
+.text-success {
+    color: $text-success-color;
+}
+.text-danger {
+    color: $text-danger-color;
+}
+/* wraps
+/* ------------------------------------------------------------------------ */
+.no-wrap {
+    white-space: nowrap;
+}

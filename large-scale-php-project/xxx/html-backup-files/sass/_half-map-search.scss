@@ -1,0 +1,247 @@
+/* half map search
+/* ------------------------------------------------------------------------ */
+.half-map-search-inner-wrap {
+	@extend .display-table;
+	@extend .full-width;
+	@extend .relative;
+	z-index: 8;
+	@include respond-to(lg-max) {
+		display: block;
+	}
+	.search-destination, 
+	.search-type,
+	.search-date-range,
+	.search-guests,
+	.search-hours-range {
+		@extend .display-table-cell;
+		width: auto;
+		vertical-align: middle;
+		padding-#{$end-direction}: 10px;
+		&:last-of-type {
+			padding-#{$end-direction}: 0;
+		}
+		@include respond-to(lg-max) {
+			display: block;
+			width: 100%;
+			margin-bottom: 10px;
+			padding-#{$end-direction}: 0;
+		}
+	}
+	.search-type .btn-group {
+		min-width: 150px;
+		width: 100% !important;
+		display: block !important;
+	}
+	.search-destination {
+		min-width: 250px;
+	}
+	.search-date-range {
+		&:after {
+			@include respond-to(lg-max) {
+				content: " ";
+				display: block;
+				width: 100%;
+				clear: both;
+			}
+		}
+	}
+	.search-calendar {
+		@include respond-to(lg-max) {
+			width: 610px;
+			#{$start-direction}: 50%;
+		}
+	}
+	.search-hours-range .search-hours-range-left,
+	.search-hours-range .search-hours-range-right {
+		margin-bottom: 0;
+	}
+	.search-destination {
+		.clear-input-btn {
+			height: 38px !important;
+			width: 38px;
+		}
+		&.with-select {
+			.filter-option {
+				line-height: 40px;
+			}
+		}
+	}
+	
+}
+.half-map-search {
+	background-color: $white;
+	padding: 15px 0;
+	border-bottom: 1px solid;
+	border-color: $brand-grey-lighter;
+	.half-map-search-buttons {
+		@extend .relative;
+		text-align: #{$end-direction};
+		clear: both;
+		top: 10px;
+		margin-bottom: 5px;
+		@include respond-to(md-max) {
+			top: 0;
+			margin-bottom: 0;
+		}
+		.btn-primary {
+			margin-#{$start-direction}: 10px;
+			@include respond-to(sm-max) {
+				width: calc(50% - 5px);
+				float: #{$end-direction};
+			}
+		}
+		.btn-grey-outlined {
+			width: 65px;
+			padding: 0;
+			@include respond-to(sm-max) {
+				width: calc(50% - 5px);
+				float: #{$start-direction};
+			}
+		}
+	}
+}
+.half-map-search-filters {
+	.search-filter {
+		@extend .top-0;
+		@extend .display-block;
+		.search-filter-wrap {
+			@extend .relative;
+			border: none;
+			box-shadow: none;
+			padding: 0 15px 15px;
+			border-bottom: 1px solid;
+			border-color: $brand-grey-lighter;
+		}
+	}
+	[class*="col-"] {
+		padding-#{$start-direction}: 5px;
+		padding-#{$end-direction}: 5px;
+	}
+	.row {
+		margin-#{$start-direction}: -5px;
+		margin-#{$end-direction}: -5px;
+	}
+}
+.search-radius-slider {
+	@extend .display-table;
+	@extend .full-width;
+	height: 44px;
+	margin-top: 10px;
+	.search-radius-distance {
+		@extend .display-table-cell;
+		vertical-align: middle;
+		width: 20%;
+		.control {
+			margin: 0;
+		}
+	}
+	.distance-range-wrap {
+		@extend .display-table-cell;
+		vertical-align: middle;
+		width: 80%;
+	}
+}
+/* jquery ui slider - rewrite
+/* ------------------------------------------------------------------------ */
+.ui-slider-horizontal .ui-slider-range,
+.ui-state-default, 
+.ui-widget-content 
+.ui-state-default, 
+.ui-widget-header 
+.ui-state-default, 
+.ui-button, 
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+	background: $white;
+	border: 1px solid $brand-grey-lighter;
+}
+.ui-widget.ui-widget-content {
+	height: 9px;
+}
+.ui-slider-horizontal .ui-slider-handle {
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	top: -11px;
+	text-align: center;
+	border-radius: 4px;
+	&:after {
+		@extend .display-block;
+		@extend .relative;
+		font-size: 11px;
+		content: "\f0c9";
+		font-family: $font-awesome;
+		top: -1px;
+		left: -1px;
+		transform: rotate(90deg);
+	}
+	&:hover {
+		cursor: pointer;
+	}
+	&:last-of-type {
+		@include respond-to(md-min) {
+			margin-left: -22px;	
+		}
+	}
+	&.ui-state-active {
+		color: $text-color;
+	}
+}
+.ui-slider-horizontal {
+	height: 5px;
+}
+.ui-slider-horizontal .ui-slider-range {
+	@extend .border-none;
+	height: 3px;
+	top: 2px;
+	border: none;
+	//background-color: $brand-grey-lighter;
+}
+.ui-state-focus {
+	outline: none !important;
+	box-shadow: none;
+}
+.ui-widget.ui-widget-content {
+	border: 1px solid $brand-grey-lighter;
+	height: auto;
+}
+/* hourly half map search
+/* ------------------------------------------------------------------------ */
+.hourly-half-map-search-inner-wrap {
+	.search-destination {
+		min-width: auto;
+	}
+	.search-hours-range {
+		width: 35%;
+		@include respond-to(lg-max) {
+			width: 100%;
+		}
+	}
+	.search-guests {
+		width: 15%;	
+		@include respond-to(lg-max) {
+			width: 100%;
+			margin-bottom: 0;
+		}
+	}
+	.search-date-hourly-arrive + .search-calendar-single {
+		width: 300px;
+		@include respond-to(lg-max) {
+			width: 100%;
+			left: 0;
+		}
+	}
+}
+.search-hourly-calendar-main {
+	width: 350px !important;
+}
+.search-hourly-calendar-main:after, .search-hourly-calendar-main:before {
+	#{$start-direction}: 50% !important;
+}
+/* Experiences half map search
+/* ------------------------------------------------------------------------ */
+.half-map-search-experiences {
+	.search-date-range-arrive {
+		width: 100%;
+	}
+}

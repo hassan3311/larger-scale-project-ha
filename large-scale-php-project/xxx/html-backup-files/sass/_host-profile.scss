@@ -1,0 +1,112 @@
+/* host profile
+/* ----------------------------------------------------------- */
+.host-profile {
+	.host-section {
+		background-color: $white;
+		.block {
+			min-height: 405px;	
+			border-#{$end-direction}: 1px dotted $brand-grey-lighter;
+			@include respond-to(md-max) {
+				border-#{$end-direction}: none;
+				border-bottom: 1px dotted $brand-grey-lighter;
+			}
+		}
+		
+		dl {
+			@extend .mb-0;
+		}
+	}
+}
+.host-property-section {
+	padding-top: 30px;
+}
+.host-contact-form {
+	.block-body {
+		padding-top: 30px;
+		padding-#{$end-direction}: 30px;
+		padding-bottom: 0;
+		padding-#{$start-direction}: 0;
+		@include respond-to(md-max) {
+			padding: 30px;
+		}
+	}
+	.block {
+		border-#{$end-direction}: none !important;
+	}
+}
+.host-listing-wrap {
+	.block-body {
+		padding: 40px 40px 10px;
+	}
+	.item-row {
+		.item-card-view {
+			max-width: 363px;
+			height: 222px;
+			@include respond-to(lg-max) {
+				max-width: 296px;
+				height: 177px;
+			}
+			@include respond-to(md-max) {
+				max-width: 335px;
+				height: 203px;
+			}
+			@include respond-to(sm-max) {
+				max-width: 480px;
+				height: 300px;
+			}
+			.title-head {
+				.title {
+					max-width: 260px;
+					@include respond-to(md-max) {
+						max-width: 240px;
+					}
+					@include respond-to(lg-max) {
+						max-width: 200px;   
+					}
+				}
+			}
+			.item-user-image {
+				@extend .display-block;
+			}
+		}	
+	}
+}
+.profile-social-icons {
+	margin-bottom: 30px;
+    border-bottom: 1px dotted $color-border;
+    padding-bottom: 50px;
+	a {
+		margin: 0 10px;
+	}
+}
+/* host profile tabs
+/* ----------------------------------------------------------- */
+.host-profile-tabs {
+	margin: 30px 0;
+	.related-post {
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
+.nav-tabs {
+	border-bottom: none;
+}
+.nav-tabs > li {
+	margin-bottom: 0;
+}
+.nav-tabs > li > a {
+	font-size: 18px;
+	line-height: 33px;
+	font-weight: 700;
+	padding: 10px 20px;
+	border: none;
+}
+.nav-tabs > li > a:hover, 
+.nav-tabs > li > a:focus,
+.nav-tabs > li.active > a, 
+.nav-tabs > li.active > a:hover, 
+.nav-tabs > li.active > a:focus {
+	border: none;
+	background-color: transparent;
+}

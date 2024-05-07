@@ -1,0 +1,372 @@
+
+.main-content-area {
+    margin: 20px 0;
+}
+/* block layout
+/* ----------------------------------------------------------- */
+.block {
+    @extend .relative;
+    margin-bottom: 30px;
+    background-color: $white;
+    @include respond-to(sm-max) {
+        margin-bottom: 15px;
+    }
+    &:last-of-type {
+        @extend .margin-0;
+    }
+    &.block-v5 {
+        background-color: transparent;
+    }
+}
+.block-head {
+    @extend %clearfix;
+    @extend .relative;
+    padding: 40px;
+    border-bottom: 1px dotted $borders-default-color;
+    @include respond-to(sm-max) {
+        padding: 25px;
+    }
+    .title-address {
+        color: $color-grey;
+        margin: 0 0 5px;
+    }
+    .title {
+        @extend .margin-0;
+        span {
+            top: -3px;
+        }
+    }
+    & + .block-verify .block-col {
+        border-top: none;
+    }
+    .edit-link {
+        @extend .absolute;
+        #{$end-direction}: 40px;
+        top: 65px;
+    }
+}
+.block-title {
+    @extend %clearfix;
+    border-bottom: 1px dotted $borders-default-color;
+    padding: 30px;
+    @include respond-to(sm-max) {
+        padding: 20px;
+    }
+}
+.block-sub-title {
+    @extend %clearfix;
+    border-top: 1px dotted $borders-default-color;
+    padding: 40px 40px 0;
+    @include respond-to(sm-max) {
+        padding: 20px 20px 0;
+    }
+}
+.title {
+    @extend .margin-0;
+}
+.sub-title {
+    margin: 0 0 30px;
+}
+.block-body {
+    padding: 40px;
+    width: 100%;
+    @extend %clearfix;
+    @extend .relative;
+    @include respond-to(sm-max) {
+        padding: 20px;
+    }    
+    .label-condition {
+        margin-top: 14px;
+    }
+    .media-left {
+        padding-#{$end-direction}: 22px;
+    }
+    .media-object {
+        width: 86px;
+    }
+}
+.block-body-v5 {
+    @extend %clearfix;
+    @extend .relative;
+    padding: 40px 0;  
+    @include respond-to(sm-max) {
+        padding: 20px 0;
+    } 
+}
+.block-left {
+    @extend .float-#{$start-direction};
+    @extend .relative;
+    @include respond-to(xs-max) {
+        float: none;
+        margin-bottom: 20px
+    }
+}
+.block-right {
+    @extend .float-#{$end-direction};
+    @extend .relative;    
+    @include respond-to(xs-max) {
+        float: none;
+    }
+}
+.block-footer {
+    border-top: 1px dotted $borders-default-color;
+    padding: 30px;
+}
+.block-link {
+    margin-top: 7px;
+}
+.block-section {
+    @extend %clearfix;
+    border-bottom: 1px dotted $borders-default-color;
+    &:last-of-type {
+        border-bottom: none;
+    }
+    .title {
+        margin-bottom: 15px;
+    }
+    .block-left {
+        width: 25%;
+        @include respond-to(sm-max) {
+            width: 100%;
+        }
+    }
+    .block-right {
+        width: 75%;
+        @include respond-to(sm-max) {
+            width: 100%;
+        }
+    }
+}
+.block-section-50 {
+    .block-left,
+    .block-right {
+        width: 50%;
+        @include respond-to(sm-max) {
+            width: 100%;
+        }
+    }
+    .block-left {
+        @include respond-to(sm-max) {
+            margin-bottom: 20px;
+        }    
+    }
+}
+.block-verify,
+.block-bordered {
+    @extend %clearfix;
+    background-color: $white;
+}
+.block-verify {
+    .block-col {
+        border-top: 1px dotted $borders-default-color;    
+    }    
+}
+.block-icon {
+    margin-bottom: 15px;
+    .fa {
+        color: $brand-grey-lighter;
+    }
+}
+.inline-block-icon {
+    .d-flex {
+        justify-content: center;
+    }
+    .block-icon {
+        margin-#{$end-direction}: 20px;
+        margin-bottom: 0;
+    }   
+}
+.block-col {
+    @extend .float-#{$start-direction};
+    text-align: center;
+    padding: 30px 0;
+    border-#{$end-direction}: 1px dotted $borders-default-color;
+    &:last-child {
+        border-#{$end-direction}: 0;
+    }
+}
+.block-col-100 {
+    width: 100%;
+}
+.block-col-50 {
+    width: 50%;
+}
+.block-col-33 {
+    width: 33.333%;
+}
+.block-col-25 {
+    width: 25%;
+    @include respond-to(sm-max) {
+        width: 50%;
+        &:nth-child(2) {
+            border-#{$end-direction}: 0;
+        }
+    }
+}
+.block-title {
+    @extend .margin-0;
+}
+.dashboard-sidebar {
+    .block {
+        margin-bottom: 15px;
+    }    
+    .block-body {
+        padding: 25px 30px;
+    }
+    .block-title {
+        padding: 25px 30px;
+    }
+}
+.inactive {
+    color: #ccc;
+}
+.block-big-text {
+    font-size: 40px; 
+    line-height: 40px;
+    @include respond-to(sm-max) {
+        font-size: 30px; 
+        line-height: 30px;
+    }
+}
+
+.block-section-no-bg {
+    .block {
+        background-color: transparent;
+    }
+    .block-body,
+    .block-head {
+        padding: 50px 0;
+    }
+    .availability-section .search-calendar {
+        border: 1px dotted $color-border;
+    }
+    .block-availability-calendars {
+        border-top: none;
+    }
+    .block-left,
+    .block-right {
+        @extend .float-none;
+    }
+    .block-section {
+        .title {
+            margin-bottom: 50px;
+        }
+        .block-right,
+        .block-left {
+            width: 100%;
+        }
+    }
+    .content-area .block {
+        border-bottom: 1px solid $color-border;
+    }
+}
+.block-flex {
+    display: flex;
+}
+/* table layout
+/* ----------------------------------------------------------- */
+.table-block {
+    @extend .display-table;
+    @extend .full-width;
+}
+.table-row {
+    @extend .display-table-row;
+    .label {
+        top: -1px;
+    }
+}
+.table-col {
+    @extend .display-table-cell;
+    @extend .v-middle;
+    border-bottom: 1px dotted $borders-default-color;
+    white-space: nowrap;
+    padding: 20px;
+    @include respond-to(xs-max) {
+        white-space: normal;
+    }
+    &:last-child {
+        text-align: #{$end-direction};
+        @extend .full-width;
+        @include respond-to(xs-max) {
+            text-align: #{$start-direction};
+            width: auto;
+        }
+    }
+    address, ul, ol {
+        @extend .margin-0;
+    }
+}
+
+/* tab layout
+/* ----------------------------------------------------------- */
+.taber-nav-fixed {
+    @extend .full-width;
+    table-layout: fixed;
+}
+.taber-nav-auto {
+    width: auto;
+    table-layout: auto;
+}
+.taber-nav {
+    @extend .margin-0;
+    @extend .padding-0;
+    @extend .display-table;
+    text-align: center;
+    font-weight: 700;
+    list-style: none;
+    @include respond-to(sm-max) {
+        margin-bottom: 15px;
+    }
+    li {
+        @extend %animation-default;
+        @extend .display-table-cell;
+        @include respond-to(sm-max) {
+            box-shadow: none;
+            display: inline-block;
+            width: 25%;
+        }
+        &:hover,
+        &.active {
+            a {
+                background-color: $white;
+                box-shadow: none;
+            }
+        }
+    }
+    a {
+        @extend .display-block;
+        color: $text-color;
+        font-weight: 500;
+        background-color: rgba($color-grey-lighter, .2);
+        margin-#{$end-direction}: 1px;
+        padding: 22px 10px;
+        @include respond-to(sm-max) {
+            margin: 1px;
+        }
+    }
+}
+.tab-pane-inner {
+    padding: 40px;
+}
+/* media objects
+/* ----------------------------------------------------------- */
+.media {
+    overflow: inherit;
+    .media-object {
+        width: 60px;
+        @extend .display-block;
+        @include respond-to(sm-max) {
+            width: 40px;
+        }
+    }
+    .media-left {
+        padding-#{$end-direction}: 20px;
+    }
+    .media-body {
+        overflow: inherit;
+    }
+    .media-heading {
+        margin: 11px 0 20px;
+    }
+}
+

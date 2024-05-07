@@ -1,0 +1,79 @@
+/* dasboard typography
+/* ------------------------------------------------------------------------ */
+.block-head {
+    .title {
+        font-size: 24px;
+        line-height: 34px;
+        @include respond-to(sm-max) {
+            font-size: 18px;
+            line-height: 28px;
+        }
+        span {
+            font-weight: 700;
+        }
+    }
+}
+.dashboard-page-title {
+    h1 {
+        @include typography(18px, 30px, 700, none, normal);
+        @include respond-to(sm-max) {
+            @include typography(16px, 20px, 700, none, normal);
+        }
+    }
+}
+.block-body {
+    .media-heading {
+        @include typography(14px, 18px, 700, none, normal);
+    }
+    .media-count {
+        @include typography(36px, 38px, 700, none, normal);
+    }
+}
+/* listing price
+/* ------------------------------------------------------------------------ */
+.item-price {
+    @include typography(28px, inherit, 500, none, normal);
+    @include respond-to(sm-max) {
+        @include typography(22px, inherit, 700, none, normal);
+    }
+    sub, sup {
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+/* dashboard heading blocks
+/* ------------------------------------------------------------------------ */
+.title,
+.sub-title,
+.item-title-head .title {
+    font-size: 16px;
+    line-height: 26px;
+    @include respond-to(sm-max) {
+        font-size: 15px;
+        line-height: 25px;
+    }
+}
+.block-icon {
+    @include typography(40px, 40px, normal, none, normal);
+}
+.block-link {
+    @include typography(13px, 13px, 700, none, normal);
+}
+/* dashboard labels
+/* ------------------------------------------------------------------------ */
+.label {
+    @include typography(10px, 10px, 700, none, normal);    
+}
+/* dashboard messages
+/* ------------------------------------------------------------------------ */
+.messages-area {
+    .media-heading {
+        @include typography(14px, inherit, 700, none, normal);
+    }
+}
+/* property page
+/* ------------------------------------------------------------------------ */
+.item-user-info {
+    @include typography(10px, 14px, 700, none, normal);
+    text-transform: capitalize;
+}

@@ -1,0 +1,18 @@
+<div class="account-loggedin">
+    User Account
+    <span class="user-image">
+        <img src="img/36x36.png" alt="profile image" class="img-circle" width="36" height="36">
+    </span>
+    <div class="account-dropdown">
+        <ul>
+            <li><a href="dashboard-user.php"><i class="homey-icon homey-icon-house-2"></i> Dashboard</a></li>
+            <li><a href="dashboard-profile-user.php"><i class="homey-icon homey-icon-single-neutral-circle"></i> Profile</a></li>
+            <li><a href="dashboard-reservations-host.php"><i class="homey-icon homey-icon-calendar-3"></i> Reservations</a></li>
+            <li><a href="dashboard-messages.php"><i class="homey-icon homey-icon-messages-bubble-text-1-messages-chat-smileys"></i> Messages</a></li>
+            <li><a href="dashboard-favorites.php"><i class="homey-icon love-it"></i> Favorites</a></li>
+            <li><a href="dashboard-saved-searches.php"><i class="homey-icon homey-icon-search-1"></i> Saved searches</a></li>
+            <li><a href="dashboard-invoices.php"><i class="homey-icon homey-icon-common-file-text-files-folders"></i> Invoices</a></li>
+            <li><a href="#"><i class="homey-icon login-interface-essential"></i> Log out</a></li>
+        </ul>
+    </div>
+</div>

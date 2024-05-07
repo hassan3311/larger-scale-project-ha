@@ -1,0 +1,1 @@
+<h1><a href="#"><img src="img/logo.png" width="128" height="30" alt="Homy"></a></h1>
